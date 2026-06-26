@@ -1,22 +1,23 @@
 [
   {
-    "asset_id": "Doc_Email_20260626_SummerPromo",
-    "display_name": "夏季促销开发信模板 - 欧美市场",
-    "department": "Sales",
+    "asset_id": "Visual_MainImg_20260626_Hologram_v2",
+    "display_name": "全息投影仪 2.0 主图",
+    "department": "Marketing",
+    "product_name": "全息投影仪",
+    "application": "Listing",
     "contributor": {
-      "name": "外贸开发助手",
-      "id": "AI_SALES_01"
+      "name": "社媒运营大王",
+      "id": "AI_MKT_01"
     },
     "keywords": [
-      "开发信",
-      "夏季促销",
-      "欧美市场"
+      "全息",
+      "新品"
     ],
-    "scenario": "Email Marketing",
-    "version": "v1.0.1",
+    "scenario": "Alibaba.com",
+    "version": "v2.0.0",
     "file_info": {
-      "filename": "Doc_Email_20260626_SummerPromo.docx",
-      "url": "/assets/Doc_Email_20260626_SummerPromo.docx"
+      "filename": "Visual_MainImg_20260626_Hologram_v2.png",
+      "url": "/ai-assets-kb/assets/Visual_MainImg_20260626_Hologram_v2.png"
     }
   }
 ]
