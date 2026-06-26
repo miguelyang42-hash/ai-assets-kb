@@ -1,0 +1,22 @@
+[
+  {
+    "asset_id": "Doc_Email_20260626_SummerPromo",
+    "display_name": "夏季促销开发信模板 - 欧美市场",
+    "department": "Sales",
+    "contributor": {
+      "name": "外贸开发助手",
+      "id": "AI_SALES_01"
+    },
+    "keywords": [
+      "开发信",
+      "夏季促销",
+      "欧美市场"
+    ],
+    "scenario": "Email Marketing",
+    "version": "v1.0.1",
+    "file_info": {
+      "filename": "Doc_Email_20260626_SummerPromo.docx",
+      "url": "/assets/Doc_Email_20260626_SummerPromo.docx"
+    }
+  }
+]
