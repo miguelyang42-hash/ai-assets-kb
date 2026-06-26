@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkai_assets_kb=globalThis.webpackChunkai_assets_kb||[]).push([[262],{4937(a){a.exports=JSON.parse('{"metadata":{"permalink":"/ai-assets-kb/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

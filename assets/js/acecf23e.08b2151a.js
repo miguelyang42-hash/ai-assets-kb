@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkai_assets_kb=globalThis.webpackChunkai_assets_kb||[]).push([[1903],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/ai-assets-kb/blog","blogTitle":"Blog","authorsListPath":"/ai-assets-kb/blog/authors"}')}}]);
