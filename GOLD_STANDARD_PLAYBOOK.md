@@ -1,35 +1,37 @@
-# XPES 外贸开发“金牌标准”模板 (v5 - 2026.06.29)
+# XPES 外贸开发“金牌标准”模板 (v6 - 2026.06.30)
 
 ## 1. 核心格式规范
-- **去图片化**: 遵照用户最新指示，**以后所有开发信不再添加图片**，以极简富文本提高送达率。
-- **渲染方式**: 使用 Gmail 原生富文本编辑器排版，确保加粗和段落分明。
-- **高亮**: 关键卖点使用**加粗 (Bold)** 突出。
+- **外贸专家手感**: 语气简洁、直接、以商业利益为导向。拒绝AI感浓重的寒暄。
+- **去图片化**: 遵照用户指示，不再添加图片。
+- **渲染方式**: 极简富文本排版。
+- **高亮**: 核心商业指标（日销2,000台、4500V、EPA认证）使用**加粗 (Bold)**。
 
 ## 2. 邮件正文模板 (英语)
 
-### A. 创新引领版 (针对新接触客户)
-**Subject**: [Innovation] 4500V Solar Mosquito Technology for {company}
+### A. 专家级渠道拓展模板 (全量使用版)
+**Subject**: Expand {company}'s 2026 catalog with high-margin Solar Insect Control
 
 Hi {name},
 
-I am **Miguel Yang**, Business Development Manager at **Guangdong Xingpu Energy Saving Light**.
+Given {company}'s leadership in {business} within the {country} market, I’ll keep this brief.
 
-I am writing to you regarding {company}'s leadership in {business}.
+I am **Miguel Yang**, Business Development Manager at **Guangdong Xingpu Energy Saving Light**. Since 2020, we have been a direct-to-factory partner specializing in advanced Solar Mosquito control for top global brands.
 
-We are a **pioneer factory in Solar Mosquito Killer Lamps since 2020**. I want to share our **2026 4500V Industrial-Grade Solar Model**. It provides the same killing power as traditional AC grid units with **Zero Electricity Cost**.
+Our new **2026 4500V Industrial-Grade Solar Model** is a current category killer in the US, averaging over **2,000 units sold per day**. It allows your brand to instantly capture the eco-friendly segment with zero electricity cost for the consumer.
 
-**Performance Highlights:**
-- **4500V High-Voltage Grid**: Consistent industrial-grade kill power.
-- **3-Day Battery Backup**: Optimized for cloudy weather performance.
-- **IP65 Waterproofing**: Perfect for outdoor durability.
+**Why this is a strategic add-on for your 2026 lineup:**
+- **Commercial-Grade Power**: 4500V high-voltage grid (Matches AC grid units).
+- **Hassle-Free Tech**: Dusk-to-dawn sensors for true "set-and-forget" convenience.
+- **Turnkey Compliance**: Fully compliant with **EPA, FCC, and RoHS** regulations.
 
-Did you do the market survey for your local market selling? I would like to share our quotation and you local hotsale model with you.
+Would you be open to a quick look at the technical data sheet and our 2026 wholesale pricing?
 
 Best regards,
 
 **Miguel Yang**
 Business Development Manager
 **Guangdong Xingpu Energy Saving Light**
+
 
 ### B. 渠道拓展/进口商专项版 (针对有中国进口经验的成熟买家)
 **Subject**: Expand your 2026 catalog with high-margin Solar Insect Control
