@@ -58,13 +58,14 @@ Business Development Manager
 ---
 
 ## 4. 协同与持久化 (Collaborative Database)
-1. **统一数据库**: 所有新挖掘和联系的客户必须统一汇总至 `XPES_Master_Leads_Database.csv`。
-2. **桌面访问**: 已在桌面建立 `XPES_Master_Leads.lnk` 快捷方式，方便用户随时检查。
-3. **Agent 协同规范**: 遵循 `XPES_Customer_Assets/README_FOR_AGENTS.md` 中的去重与状态更新规则，确保多个智能体协作时不发生冲突或数据丢失。
+1. **全量迁移至 G 盘**: 所有工作资产（客户表、数据库、截图、照片）已永久迁移至 **G 盘**，严禁继续使用 C 盘。
+2. **统一数据库**: `G:\XPES_Customer_Assets\XPES_Master_Leads_Database_Updated.csv`。
+3. **桌面访问**: 已在桌面建立 `XPES_Master_Leads.lnk` 快捷方式（指向 G 盘）。
+4. **Agent 协同规范**: 遵循 `G:\XPES_Customer_Assets\README_FOR_AGENTS.md` 中的去重与状态更新规则。
 
 ## 6. 知识库与数据同步 (Knowledge Base & Sync)
-1. **数据上传**: 每日工作完成后，必须将生成的客户表格及主数据库同步至 [ai-assets-kb](https://miguelyang42-hash.github.io/ai-assets-kb/)。
-2. **操作规范**: 使用 `git push` 将 `XPES_Customer_Assets/` 下的更新推送到关联的 GitHub 仓库，以供其他智能体和团队成员协同。
+1. **数据上传**: 每日工作完成后，必须将 **G:\XPES_Customer_Assets** 下的最新数据库同步至 [ai-assets-kb](https://miguelyang42-hash.github.io/ai-assets-kb/)。
+2. **操作规范**: 使用 `git push` 将 **G 盘**下的更新推送到关联的 GitHub 仓库。
 
 ## 5. 验证与质量红线
 1. **身份真实**: 签名必须完整（Miguel Yang + 经理职位 + 星普公司名）。
