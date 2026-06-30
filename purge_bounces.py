@@ -30,7 +30,10 @@ BOUNCED_EMAILS = [
     "montaser.abdullah@saco-ksa.com",
     "m.nabaa@saco-ksa.com",
     "anna.hosszu@procurementservices.co.uk",
-    "karen.fillingham@procurementservices.co.uk"
+    "karen.fillingham@procurementservices.co.uk",
+    "contacto@pestweb.com",
+    "info@kombatstore.com",
+    "support@langy-energy.com"
 ]
 
 def clean_database():
