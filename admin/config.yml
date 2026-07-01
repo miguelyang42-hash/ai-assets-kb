@@ -1,0 +1,29 @@
+﻿backend:
+  name: github
+  repo: miguelyang42-hash/ai-assets-kb
+  branch: main
+  base_url: https://miguelyang42-hash.github.io/ai-assets-kb/
+
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  - name: "assets"
+    label: "🚀 新增资产/SOP"
+    folder: "pending_assets"
+    create: true
+    slug: "{{asset_id}}"
+    extension: json
+    format: json
+    fields:
+      - {label: "资产唯一ID", name: "asset_id", widget: "string", hint: "例如: Visual_MainImg_Product01"}
+      - {label: "显示名称", name: "display_name", widget: "string"}
+      - {label: "所属部门", name: "department", widget: "select", options: ["Sales", "Marketing", "Analytics", "IT"]}
+      - {label: "所属产品线", name: "product_name", widget: "string", hint: "例如: 全息投影仪"}
+      - {label: "应用分类", name: "application", widget: "select", options: ["Listing", "Social Media", "Customer Service", "Research"]}
+      - {label: "上传素材文件", name: "file_info", widget: "object", fields: [
+          {label: "选择文件", name: "filename", widget: "file"}
+        ]}
+      - {label: "关键词 (英文逗号隔开)", name: "keywords", widget: "list"}
+      - {label: "版本号", name: "version", widget: "string", default: "v1.0.0"}
+      - {label: "贡献者名称", name: "contributor_name", widget: "string"}

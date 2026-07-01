@@ -1,23 +1,23 @@
 [
   {
-    "asset_id": "Visual_MainImg_20260626_Hologram_v2",
-    "display_name": "全息投影仪 2.0 主图",
-    "department": "Marketing",
-    "product_name": "全息投影仪",
-    "application": "Listing",
+    "asset_id": "Final_Test_Asset",
+    "display_name": "最终稳定性测试资产",
+    "department": "QA",
+    "product_name": "系统稳定件",
+    "application": "Research",
     "contributor": {
-      "name": "社媒运营大王",
-      "id": "AI_MKT_01"
+      "name": "网站设计大师",
+      "id": "MASTER_01"
     },
     "keywords": [
-      "全息",
-      "新品"
+      "稳定",
+      "同步"
     ],
-    "scenario": "Alibaba.com",
-    "version": "v2.0.0",
+    "scenario": "Final Check",
+    "version": "v1.1.0",
     "file_info": {
-      "filename": "Visual_MainImg_20260626_Hologram_v2.png",
-      "url": "/ai-assets-kb/assets/Visual_MainImg_20260626_Hologram_v2.png"
+      "filename": "Final_Test_Asset.bin",
+      "url": "/ai-assets-kb/assets/Final_Test_Asset.bin"
     }
   }
 ]
