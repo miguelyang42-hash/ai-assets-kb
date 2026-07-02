@@ -1,0 +1,141 @@
+{
+  "name": "super-background-check",
+  "display_name": "超级背调专家（小蜂学掌）",
+  "version": "3.0.0",
+  "build_date": "2026-05-09",
+  "framework": "skill-writer-pro v3.0",
+  "brand": {
+    "name": "小蜂学掌",
+    "name_en": "BEE-EDUCATION",
+    "website": "www.xfxz123.com",
+    "copyright": "© 小蜂学掌 www.xfxz123.com 版权所有，未经授权禁止转载"
+  },
+  "description": "10 维全息客户背调引擎 v3.0（小蜂学掌定制版）- 单 Excel 6 Sheet（⓪ 封面 / ① 决策摘要 / ② 全息档案 / ③ 决策人图谱 / ④ 数据来源 / ⑤ 自检报告）。全 Sheet 注入小蜂学掌品牌表头/表尾（www.xfxz123.com）；新增封面 Sheet；文件名冠「小蜂学掌_」前缀；运行时实时播报 10 维进度条。触发词：超级背调/背调/客户背调/深度背调/客户尽调/Background Check/Customer Due Diligence/B2B Recon",
+  "trigger_keywords": [
+    "超级背调",
+    "背调",
+    "客户背调",
+    "深度背调",
+    "客户尽调",
+    "Background Check",
+    "Customer Due Diligence",
+    "B2B Recon",
+    "客户调查"
+  ],
+  "trigger_command": "#超级背调 [公司名 OR 官网URL]",
+  "input_schema": {
+    "company_name_or_url": "string (required) - 公司英文名或官网URL，二选一即可"
+  },
+  "output_artifacts": [
+    {
+      "type": "xlsx",
+      "path_template": "D:/Personal/Desktop/超级背调/{company_short}_{date_str}/小蜂学掌_单客户档案_{company_short}_{date_str}.xlsx",
+      "renderer": "scripts/excel_gen.py",
+      "validator": "scripts/sanity_check.py",
+      "sheets": [
+        "⓪ 封面 (小蜂学掌品牌封面: LOGO大标题 / BEE-EDUCATION / www.xfxz123.com / 公司名 / 日期)",
+        "① 决策摘要 (≥30 行 × 4 列, 品牌表头/表尾 + 顶部贸易速览 4 列卡片 + 5 套话术全文 + 中英开发信全文)",
+        "② 全息档案 (≥41 行 × 5 列, 品牌表头/表尾 + 10 维结构含第 10 维进出口贸易)",
+        "③ 决策人图谱 (≥6 行 × 8 列, 品牌表头/表尾 + 至少 1 位 P0)",
+        "④ 数据来源 (≥4 行 × 3 列, 品牌表头/表尾)",
+        "⑤ 自检报告 (17 行, 品牌表头/表尾 + sanity_check 自动回写)"
+      ]
+    },
+    {
+      "type": "chat_markdown",
+      "template": "templates/chat_summary.md"
+    }
+  ],
+  "dimensions": [
+    "客户类型定位",
+    "公司基本情报",
+    "实力规模",
+    "产品业务模式",
+    "贸易海关数据",
+    "决策人图谱(≥5位)",
+    "社交媒体资产",
+    "风险评估",
+    "跟进决策+5套话术+中英开发信",
+    "进出口贸易数据 (v2.5 新增 - 年度总进口/总销售/进口占销比/分国家进口明细 ≥3 国)"
+  ],
+  "data_sources": [
+    "官网",
+    "LinkedIn",
+    "Apollo",
+    "Hunter.io",
+    "Crunchbase",
+    "Panjiva",
+    "ImportYeti",
+    "52WMB",
+    "ZoomInfo",
+    "Bloomberg / D&B（年度销售额）",
+    "Facebook/Instagram/YouTube/TikTok"
+  ],
+  "validation_redlines": [
+    "R0 (最高优先级): 所有 URL 必须存在于 data_sources 中（即 web_fetch 实测过），任何字段引用未实测 URL 直接拦截；统一占位术语为「暂未找到」，禁用旧变体",
+    "R1: 决策人 < 5 位 → 重新挖掘",
+    "R2: 任一维度字段为空 → 重发 web_search",
+    "R3: risk_score 不在 0-100 → 强制重算",
+    "R4: dim9_decision 不是三选一 → 强制三选一",
+    "R5: dim9_pitches != 5 套 → 重生成至 5",
+    "R6: WhatsApp 非 E.164 / 伪造号段 → 改为「暂未找到」",
+    "R14: LinkedIn 不符 /in/ 格式或猜测式 slug → 改为「暂未找到」",
+    "R15: 邮箱无 (已验证)/(推测,未验证) 标注 → 报错",
+    "R16: 社媒 URL 不符合官方域名白名单 → 改为「暂未找到」",
+    "R17: 字段含 example.com / lorem / xxx 占位 → 整字段降级「暂未找到」",
+    "R18 (v2.5 新增): dim10_trade.import_breakdown < 3 国家 → 重新查 Panjiva/ImportYeti，凑满 3 个最大来源国"
+  ],
+  "sanity_check": {
+    "script": "scripts/sanity_check.py",
+    "assertions": [
+      "S01: openpyxl.load_workbook 能正常打开（拦截 styles.xml 腐烂）",
+      "S02: Sheet 数 = 6（含 ⓪ 封面）",
+      "S03: 决策人图谱 ≥ 6 行（含表头）",
+      "S04: 决策人图谱列数 = 8",
+      "S05: 至少 1 位 P0 决策人",
+      "S06: 数据来源 ≥ 4 行",
+      "S07: 风险评分单元格存在条件格式规则",
+      "S08: 决策结论单元格语义填充色（绿/黄/红）",
+      "S09: 文件名格式 = 小蜂学掌_单客户档案_{company_short}_{YYYYMMDD}.xlsx",
+      "S10: 文件大小 > 10 KB",
+      "S11: 全息档案 ≥ 41 行（含第 10 维 + 品牌表头）",
+      "S12: 5 套话术每套 ≥ 20 字 + 不含占位词",
+      "S13: 中英开发信各 ≥ 50 字 + 不含占位词",
+      "S14 (v2.5): Sheet ① 顶部存在『贸易体量速览』4 列卡片（年度总进口额 / 年度销售额 / 进口占销比 / 数据年份）",
+      "S15 (v2.5): Sheet ② 存在『第 10 维 · 进出口贸易数据』章节标题条",
+      "S16 (v2.5): 分国家进口明细 ≥ 3 行 × 5 列齐全（国家 / USD 金额 / 占比 / 主要品类 / Top 供应商）",
+      "S17 (v2.5): 年度总进口额 / 年度销售额 含 USD 前缀且非占位词（暂未找到/未公开/TBD/USD 0 全拦截）"
+    ],
+    "anti_lazy_blacklist": [
+      "尊敬的客户，感谢您的咨询",
+      "Dear customer, thank you for your inquiry",
+      "待补充",
+      "TBD",
+      "N/A（默认）",
+      "示例内容",
+      "lorem ipsum"
+    ],
+    "trade_placeholder_blacklist": [
+      "暂未找到",
+      "未公开",
+      "未披露",
+      "TBD",
+      "N/A",
+      "待补充",
+      "示例",
+      "USD 0"
+    ]
+  },
+  "references": [
+    "references/email-verification-guide.md (R15 配套：Hunter.io 25 次/月 + Apollo.io 60 次/月 邮箱验证操作手册)"
+  ],
+  "dependencies": {
+    "python": ">=3.10",
+    "packages": ["openpyxl>=3.1.0"]
+  },
+  "changelog": {
+    "v3.0.0": "小蜂学掌品牌全渗透：⓪封面Sheet（LOGO/官网/日期）+ 全5内容Sheet品牌表头/表尾（小蜂学掌|BEE-EDUCATION|www.xfxz123.com）+ 文件名「小蜂学掌_」前缀 + Step1触发范式ASCII品牌头 + 实时10维进度播报对话框 + sanity_check S02=6/S09品牌正则/S11≥41行",
+    "v2.5.0": "新增第 10 维进出口贸易数据：Sheet ① 顶部贸易体量速览 4 列卡片（含进口占销比红/黄/绿条件填充） + Sheet ② 末尾第 10 维章节（顶部 3 行汇总 + 分国家进口明细 ≥3 国 × 5 列）+ sanity_check 升至 17 项（S14-S17 拦截贸易数据缺失）+ schema 强制 dim10_trade 7 字段 + 占位词黑名单升级",
+    "v2.4.0": "极致重构：砍 Word 改单 Excel 5 Sheet + 反 Auto 偷懒 sanity_check 13 项硬断言 + excel_gen 全链路 fail-fast"
+  }
+}

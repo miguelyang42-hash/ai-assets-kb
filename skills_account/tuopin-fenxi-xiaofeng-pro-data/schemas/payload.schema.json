@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TuopinFenxiXiaofengV3Payload",
+  "type": "object",
+  "required": ["meta", "input", "output"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["timestamp"],
+      "properties": {
+        "timestamp": { "type": "string", "format": "date-time" },
+        "skill_version": { "type": "string", "const": "3.0.0" }
+      }
+    },
+    "input": {
+      "type": "object",
+      "required": ["product", "data"],
+      "properties": {
+        "product": {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1, "maxLength": 50 }
+          }
+        },
+        "target_market": { "type": "string", "default": "全球" },
+        "company": {
+          "type": "object",
+          "properties": {
+            "who":        { "type": "string", "description": "我是谁（公司定位描述）" },
+            "products":   { "type": "string", "description": "核心产品" },
+            "advantages": { "type": "string", "description": "核心优势" }
+          }
+        },
+        "data": {
+          "type": "object",
+          "required": ["A", "B", "C", "D"],
+          "properties": {
+            "A": { "$ref": "#/definitions/skuList" },
+            "B": { "$ref": "#/definitions/skuList" },
+            "C": { "$ref": "#/definitions/skuList" },
+            "D": { "$ref": "#/definitions/skuList" }
+          }
+        },
+        "suggestions": {
+          "type": "object",
+          "description": "各象限落地建议（每象限至少 3 条，不足时脚本使用内置默认值）",
+          "properties": {
+            "A": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+            "B": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+            "C": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+            "D": { "type": "array", "items": { "type": "string" }, "minItems": 3 }
+          }
+        },
+        "data_sources": {
+          "type": "array",
+          "description": "本次分析引用的数据来源（≥ 3 个）",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["platform", "usage", "url"],
+            "properties": {
+              "platform":      { "type": "string" },
+              "usage":         { "type": "string" },
+              "url":           { "type": "string", "format": "uri" },
+              "accessed_date": { "type": "string", "format": "date" }
+            }
+          }
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "file_path":   { "type": "string" },
+        "filename":    { "type": "string", "pattern": ".*（小蜂学掌）\\.docx$" },
+        "generated_at":{ "type": "string", "format": "date-time" }
+      }
+    }
+  },
+  "definitions": {
+    "skuList": {
+      "type": "array",
+      "minItems": 20,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "keyword", "logic", "scenario"],
+        "properties": {
+          "id":        { "type": "integer", "minimum": 1, "maximum": 20 },
+          "name":      { "type": "string", "minLength": 2, "maxLength": 60 },
+          "keyword":   { "type": "string", "minLength": 2, "maxLength": 80 },
+          "logic":     { "type": "string", "minLength": 10, "maxLength": 200 },
+          "scenario":  { "type": "string", "minLength": 5,  "maxLength": 150 },
+          "recommend": { "type": "boolean", "description": "是否为前5推荐SKU，标 ⭐" }
+        }
+      }
+    }
+  }
+}

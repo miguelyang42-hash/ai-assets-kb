@@ -1,0 +1,36 @@
+{
+  "27_skill-finder": {
+    "installedVersion": "0.0.75"
+  },
+  "27_skill-creator": {
+    "installedVersion": "0.0.75"
+  },
+  "27_self-improvement": {
+    "installedVersion": "0.0.75"
+  },
+  "27_accio-mcp-cli": {
+    "installedVersion": "0.0.75"
+  },
+  "27_image-prompt-guide": {
+    "installedVersion": "0.0.75"
+  },
+  "global-sales-elite-v5": {
+    "enabled": true
+  },
+  "trade-email-case-copilot": {
+    "enabled": true,
+    "installedVersion": "2.0.0"
+  },
+  "super-background-check": {
+    "enabled": true,
+    "installedVersion": "3.0.0"
+  },
+  "tuopin-fenxi-xiaofeng-pro-data": {
+    "enabled": true,
+    "installedVersion": "3.1.0"
+  },
+  "alibaba-hero-image-gen": {
+    "enabled": true,
+    "installedVersion": "1.0.0"
+  }
+}

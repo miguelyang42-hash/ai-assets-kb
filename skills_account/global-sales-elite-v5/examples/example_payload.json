@@ -1,0 +1,74 @@
+{
+  "channel": "google",
+  "country": "美国",
+  "segment": "全屋定制",
+  "v1_assessment": {
+    "name_simple": "ExampleCorp",
+    "type": "美国中型全屋定制橱柜厂（示例数据）",
+    "basis": "用于演示 V5.3 工程化版本一键生成 Word + Excel 流程的样例 payload。",
+    "rating": "A"
+  },
+  "v2_intelligence": {
+    "company_full_name": "Example Custom Cabinetry Inc.",
+    "country": "USA",
+    "website": "https://example-cabinetry.com/",
+    "founded": "2005",
+    "hq": "Pennsylvania, USA",
+    "social": "Instagram 示例账号 5W 粉丝；月均更新 20 条；Pinterest 矩阵活跃。"
+  },
+  "v3_insight": {
+    "factory_scale": "中型工厂，员工 100-300 人。",
+    "market_position": "美东 5 州中端全屋定制市场领先者。",
+    "social_activity": "中等：周更 3-5 条 Reels。",
+    "sourcing_logic": "性价比导向，对中国五金供应链开放但需 BSCI 认证。",
+    "tech_preference": "隐形铰链 / 阻尼滑轨 / 软关闭技术。"
+  },
+  "v4_contacts": [
+    {
+      "name": "John Smith",
+      "title": "VP of Procurement",
+      "email": "john.smith@example-cabinetry.com",
+      "linkedin": "https://www.linkedin.com/in/example-john/",
+      "whatsapp": "(预测格式) +1-215-XXX-XXXX",
+      "touchpoint": "邮件 + LinkedIn",
+      "strategy": "提供 Plain & Fancy 同款铰链样品 + BSCI 报告。"
+    },
+    {
+      "name": "Sarah Lee",
+      "title": "Sourcing Manager",
+      "email": "sarah.lee@example-cabinetry.com",
+      "linkedin": "https://www.linkedin.com/in/example-sarah/",
+      "whatsapp": "(预测格式) +1-215-XXX-XXXY",
+      "touchpoint": "邮件",
+      "strategy": "提供 12 个月稳定供货承诺与年度返点方案。"
+    },
+    {
+      "name": "Mike Johnson",
+      "title": "Quality Director",
+      "email": "mike.johnson@example-cabinetry.com",
+      "linkedin": "https://www.linkedin.com/in/example-mike/",
+      "whatsapp": "(预测格式) +1-215-XXX-XXXZ",
+      "touchpoint": "邮件 + 视频会议",
+      "strategy": "邀请来华验厂或寄送 ISO/BSCI/SGS 三件套。"
+    }
+  ],
+  "v5_negotiation": {
+    "situation": "中型买家，年采购量 5-10 万件铰链，对价格敏感但更看重交期稳定性。",
+    "pain_point": "现有德国供应商交期 12-16 周；急需 6-8 周交期备份方案。",
+    "solution": "提出 8 周标准交期 + 美西海外仓常备库存方案，价格比德国低 30%。"
+  },
+  "v6_templates": {
+    "chinese": "John 您好，我是西安专精家具五金 18 年的工厂田伯光（https://xabhardware.en.alibaba.com/）。注意到 Example Cabinetry 在 Pinterest 上最近 3 个项目都使用了隐形铰链结构，这正是我们为美国 Plain & Fancy 量产的同款工艺。准备了样品 + 8 周交期承诺 + 美西海外仓方案，希望本周通话 15 分钟介绍。",
+    "english": "Hi John, I'm Tian from Xi'an, an 18-year specialist factory in furniture hardware (https://xabhardware.en.alibaba.com/). Noticed Example Cabinetry's last 3 Pinterest features all used concealed-hinge structures — exactly what we mass-produce for Plain & Fancy in the US. I've prepared samples + 8-week lead time commitment + US-West warehouse stock plan. Open to a 15-min call this week?"
+  },
+  "v7_product_analysis": {
+    "pricing": "中端到中高端，单价 $180-$450/套橱柜五金。",
+    "preference": "隐形 / 阻尼 / 软关闭 / FSC 认证；要求 BSCI 工厂审核。"
+  },
+  "v8_suggestions": [
+    "首批样品 + 8 周交期 + 美西海外仓三件套切入。",
+    "争取 12 个月独家备份供应商身份，年度采购量 5-10 万件。",
+    "邀请 Mike Johnson 来华验厂建立信任。",
+    "用 Plain & Fancy 案例作为信任背书。"
+  ]
+}

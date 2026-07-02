@@ -1,0 +1,22 @@
+## 1. Problem Judgment
+
+Issue: Price objection
+Type: Price negotiation
+Stage: Quote follow-up
+Risk: Losing deal to cheaper competitor
+Opportunity: Defend value with quality evidence
+
+## 2. Case Match
+
+CASE-PRICE-002 / SRC-003 / Client comparing suppliers
+CASE-PRICE-003 / SRC-003 / Client keeps cutting price
+
+## 3. Response Strategy
+
+Step 1: Acknowledge the comparison.
+Step 2: Break down the cost difference.
+
+## 4. Email Drafts
+
+Chinese: [draft content]
+English: [draft content]

@@ -1,0 +1,7 @@
+# 精细化开发-小蜂学掌 V5.3 工程化版 - 依赖锁定
+# 跨平台测试通过：Windows 10/11、macOS 12+、Ubuntu 20.04+
+# Python >= 3.9
+
+python-docx>=1.1.0,<2.0.0
+openpyxl>=3.1.0,<4.0.0
+jsonschema>=4.17.0,<5.0.0

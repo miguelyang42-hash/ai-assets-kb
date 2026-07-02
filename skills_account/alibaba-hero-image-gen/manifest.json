@@ -1,0 +1,61 @@
+{
+  "name": "alibaba-hero-image-gen",
+  "display_name": "阿里国际站产品主图生成器",
+  "version": "1.0.0",
+  "description": "阿里巴巴国际站产品主图生成专家。适用于所有行业，每次运行前必问5题（产品图/类目/主图类型/目标市场/数量），实时爬取 Alibaba.com Top Ranking 竞品主图风格作为参考，按 B2B 买家偏好生成专业主图。触发词：阿里国际站主图/产品主图生成/B2B主图/主图作图/alibaba listing image/hero image/主图生图/产品主图",
+  "author": "AW x skill-writer-pro v3.0",
+  "license": "Internal",
+  "entry": "SKILL.md",
+  "tags": [
+    "alibaba",
+    "b2b",
+    "hero-image",
+    "product-image",
+    "ecommerce",
+    "oem",
+    "odm",
+    "top-ranking",
+    "all-industry"
+  ],
+  "trigger_keywords": [
+    "阿里国际站主图",
+    "产品主图生成",
+    "B2B主图",
+    "主图作图",
+    "alibaba listing image",
+    "hero image",
+    "主图生图",
+    "产品主图"
+  ],
+  "scripts": {
+    "sanity_check": "scripts/sanity_check.py"
+  },
+  "image_types": [
+    "product-main",
+    "multi-color",
+    "multi-size",
+    "custom-logo",
+    "custom-packaging",
+    "lifestyle-scene"
+  ],
+  "workflow": {
+    "step1": "5-question collection (mandatory)",
+    "step2": "Alibaba Top Ranking crawl (mandatory, per session)",
+    "step3": "image generation by selected types"
+  },
+  "dependencies": {
+    "python": ">=3.10",
+    "pip": [
+      "jsonschema>=4.20.0"
+    ]
+  },
+  "self_check_required": true,
+  "min_audit_grade": "A",
+  "compatibility": {
+    "platform": ["windows", "macos", "linux"],
+    "console_encoding": "utf-8"
+  },
+  "changelog": {
+    "1.0.0": "初版。全行业通用，5问必问 + Top Ranking 必爬 + 6类主图按需生成。固化 SOUL v2.4 全15信条。"
+  }
+}

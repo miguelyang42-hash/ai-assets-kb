@@ -1,0 +1,884 @@
+{
+  "skills": [
+    {
+      "id": "27_1688-sourcing",
+      "name": "1688-sourcing",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "1688-sourcing",
+      "description": "1688 image-based product matching - Find similar products on 1688 via image search. Use cases: Finding 1688 suppliers for Amazon product sourcing, reverse image search for suppliers, batch search for similar products. Input supports image URL lists or local image files. Results are automatically saved as CSV/JSON files under the project path.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\1688-sourcing"
+    },
+    {
+      "id": "27_accio-mcp-cli",
+      "name": "accio-mcp-cli",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "accio-mcp-cli",
+      "description": "Use the accio-mcp-cli command-line tool to discover, search, and invoke MCP tools (Twitter, Gmail, Notion, Square, Apify, etc.) directly from the terminal. Use when the user asks to call MCP tools via CLI, run accio-mcp-cli commands, list available MCP tools from the command line, or invoke remote service integrations from the shell instead of an in-app MCP gateway.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\accio-mcp-cli"
+    },
+    {
+      "id": "27_alibaba-amazon-market-intel",
+      "name": "alibaba-amazon-market-intel",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "alibaba-amazon-market-intel",
+      "description": "Amazon market data toolkit powered by Jungle Scout MCP. 6 APIs, 42 sub-modules covering keyword search volume, reverse-ASIN, sales estimates, product database filtering, and brand share of voice.\nUse when the user asks for a SINGLE Amazon data point or one-dimensional analysis: - Keyword search volume / trend / seasonality - Reverse-ASIN keyword research, competitor gap analysis, listing/SEO audit - ASIN sales & revenue estimation, stock-out detection, promo impact - Keyword expansion, PPC bid analysis, cross-market comparison - Product database filtering: niche discovery, category sizing, brand intel - Share-of-voice on search results pages, ad effectiveness\nDo NOT use for: - Non-Amazon platforms; logistics / payment / legal questions - General knowledge questions that need no real data - Supply-chain / factory / 1688 / Alibaba.com sourcing - Tasks where the user already has data and just needs charts - End-to-end deep-dive product-selection reports → use `jungle-scout-deep-dive-analyzer`",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\alibaba-amazon-market-intel"
+    },
+    {
+      "id": "27_aliexpress-supplier-evaluator",
+      "name": "aliexpress-supplier-evaluator",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "aliexpress-supplier-evaluator",
+      "description": "Evaluate B2C suppliers on global platforms like AliExpress or Temu for reliability, shipping costs, and product authenticity.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\aliexpress-supplier-evaluator"
+    },
+    {
+      "id": "27_amz-hot-keywords",
+      "name": "amz-hot-keywords",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "amz-hot-keywords",
+      "description": "Amazon hot keyword scraper - scrapes ABA (Amazon Brand Analytics) weekly search term rankings from AMZ123. Extracts keyword, current week rank, last week rank, and trend (up/down/flat). Use this skill whenever the user asks to check Amazon hot search keywords, search term rankings, keyword trends, keyword popularity, or mentions AMZ123. Trigger phrases include: 'hot keywords', 'search term rank', 'keyword trend', 'Amazon keyword', 'ABA data', 'search volume rank', 'search popularity', 'trending keywords on Amazon', as well as Chinese equivalents like '热搜词', '搜索热度', '关键词排名', '关键词趋势'.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\amz-hot-keywords"
+    },
+    {
+      "id": "27_amz-product-optimizer",
+      "name": "amz-product-optimizer",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "amz-product-optimizer",
+      "description": "Amazon product optimization end-to-end automation - A one-stop solution from hot keyword analysis to product detail image generation. Trigger phrases: \"optimize product\", \"generate product images\", \"get hot keywords\", \"cat food optimization\", \"dog bed listing\"",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\amz-product-optimizer"
+    },
+    {
+      "id": "27_bestseller-pattern-decoder",
+      "name": "bestseller-pattern-decoder",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "bestseller-pattern-decoder",
+      "description": "Deconstructs the success patterns of Amazon Best Sellers — pricing sweet spots, image composition, title keyword structures, and A+ content narrative logic. Use when analyzing top 1% performers in any Amazon category to build a high-conversion listing blueprint.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\bestseller-pattern-decoder"
+    },
+    {
+      "id": "[Harvest-SubAgent] 独立站品牌联系人及邮箱深度调研",
+      "name": "[Harvest-SubAgent] 独立站品牌联系人及邮箱深度调研",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "brand-contact-research",
+      "description": "针对指定电商品牌或产品类目进行深度联络信息调研，挖掘官网、业务邮箱及负责人背景并验证邮箱可达性；同时批量挖掘同类Shopify或eBay独立站卖家。适用于跨境B2B开发、供应链对接及竞品渠道拓展。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\brand-contact-research"
+    },
+    {
+      "id": "27_cart-abandonment-recovery",
+      "name": "cart-abandonment-recovery",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "cart-abandonment-recovery",
+      "description": "Trigger: Set up automated email and SMS sequences to win back shoppers who abandon their items during checkout.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\cart-abandonment-recovery"
+    },
+    {
+      "id": "27_checkout-flow-optimizer",
+      "name": "checkout-flow-optimizer",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "checkout-flow-optimizer",
+      "description": "Trigger: Optimize the checkout flow with address autocomplete, express payments, and field reduction to increase conversion and reduce abandonment.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\checkout-flow-optimizer"
+    },
+    {
+      "id": "27_company-research",
+      "name": "company-research",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "company-research",
+      "description": "Company research using Exa search. Finds company info, competitors, news, tweets, financials, LinkedIn profiles, builds company lists. Use when researching companies, doing competitor analysis, market research, or building company lists.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\company-research"
+    },
+    {
+      "id": "27_competitive-landscape",
+      "name": "competitive-landscape",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "competitive-landscape",
+      "description": "This skill should be used when the user asks to \"analyze competitors\", \"assess competitive landscape\", \"identify differentiation\", \"evaluate market positioning\", \"apply Porter's Five Forces\", or requests competitive strategy analysis.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\competitive-landscape"
+    },
+    {
+      "id": "27_competitor-deep-analysis",
+      "name": "competitor-deep-analysis",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "competitor-deep-analysis",
+      "description": "Identify market gaps and strategic advantages through systematic multi-layer intelligence gathering and review mining.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\competitor-deep-analysis"
+    },
+    {
+      "id": "27_content-breakdown",
+      "name": "content-breakdown",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "content-breakdown",
+      "description": "Deep content breakdown expert (enhanced version). Supports Xiaohongshu/Bilibili/Douyin. For Bilibili videos, includes \"danmaku peak analysis\" and \"keyframe visual verification\" capabilities. Five-dimensional analysis: Content structure + Audience feedback + Title packaging + Peak moment analysis + Topic follow-up suggestions. Trigger phrases: breakdown, analyze viral content, content review, deep analysis, analyze this video/post.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\content-breakdown"
+    },
+    {
+      "id": "27_content-strategy",
+      "name": "content-strategy",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "content-strategy",
+      "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \"content strategy,\" \"what should I write about,\" \"content ideas,\" \"blog strategy,\" \"topic clusters,\" or \"content planning.\" For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\content-strategy"
+    },
+    {
+      "id": "27_copywriting",
+      "name": "copywriting",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "copywriting",
+      "description": "Use this skill when writing, rewriting, or improving marketing copy for any page (homepage, landing page, pricing, feature, product, or about page). This skill produces clear, compelling, and testable copy while enforcing alignment, honesty, and conversion best practices.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\copywriting"
+    },
+    {
+      "id": "27_coupon-discount-manager",
+      "name": "coupon-discount-manager",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "coupon-discount-manager",
+      "description": "Trigger: Create and manage a coupon system with percentage and fixed discounts, usage limits, and expiration dates.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\coupon-discount-manager"
+    },
+    {
+      "id": "27_creating-financial-models",
+      "name": "creating-financial-models",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "creating-financial-models",
+      "description": "This skill provides an advanced financial modeling suite with DCF analysis, sensitivity testing, Monte Carlo simulations, and scenario planning for investment decisions",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\creating-financial-models"
+    },
+    {
+      "id": "27_cross-border-selection",
+      "name": "cross-border-selection",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "cross-border-selection",
+      "description": "Cross-border e-commerce product selection workflow - Scrape product data from platforms like Amazon and save as local files. Use cases: (1) User requests Amazon product data scraping (2) User requests product selection analysis (3) \"Help me select products\", \"Scrape competitor data\", \"Analyze best-selling products\"",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\cross-border-selection"
+    },
+    {
+      "id": "27_customer-ltv-calculator",
+      "name": "customer-ltv-calculator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "customer-ltv-calculator",
+      "description": "Trigger: Calculate customer lifetime value (CLV) and use it to drive retention strategies, VIP programs, and win-back flows.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\customer-ltv-calculator"
+    },
+    {
+      "id": "27_customer-retention-automator",
+      "name": "customer-retention-automator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "customer-retention-automator",
+      "description": "Design and automate lifecycle campaigns to reduce churn using behavioral triggers, tiered incentives, and predictive timing.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\customer-retention-automator"
+    },
+    {
+      "id": "27_customer-rfm-analyzer",
+      "name": "customer-rfm-analyzer",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "customer-rfm-analyzer",
+      "description": "Analyze customer purchase patterns using RFM scoring, cohort retention grids, and lifecycle segmentation to drive repeat revenue.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\customer-rfm-analyzer"
+    },
+    {
+      "id": "27_customer-voice-analyzer",
+      "name": "customer-voice-analyzer",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "customer-voice-analyzer",
+      "description": "Mines customer reviews into 6 actionable dimensions — personas, scenarios, pros, cons, unmet needs, and buying motives. Use when analyzing Amazon product reviews to identify product flaws, extract high-converting marketing hooks, or find iteration opportunities.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\customer-voice-analyzer"
+    },
+    {
+      "id": "27_customer-winback-automator",
+      "name": "customer-winback-automator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "customer-winback-automator",
+      "description": "Identify and re-engage lapsed customers through automated multi-stage reactivation sequences. Implement tiered discounting based on historical LTV and establish sunsetting protocols for unengaged contacts.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\customer-winback-automator"
+    },
+    {
+      "id": "27_discount-promotion-engine",
+      "name": "discount-promotion-engine",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "discount-promotion-engine",
+      "description": "Configure and manage complex ecommerce promotions including tiered quantity pricing, BOGO, and cart-level rules while ensuring margin protection and stacking governance.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\discount-promotion-engine"
+    },
+    {
+      "id": "27_dropshipping-supplier-integrator",
+      "name": "dropshipping-supplier-integrator",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "dropshipping-supplier-integrator",
+      "description": "Automate the lifecycle of dropship orders from multi-supplier routing and inventory synchronization to margin tracking and fulfillment reconciliation.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\dropshipping-supplier-integrator"
+    },
+    {
+      "id": "27_dynamic-pricing-engine",
+      "name": "dynamic-pricing-engine",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "dynamic-pricing-engine",
+      "description": "Trigger: Automatically adjust prices based on demand signals, competitor prices, and inventory levels to maximize revenue.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\dynamic-pricing-engine"
+    },
+    {
+      "id": "27_ecommerce-budget-forecaster",
+      "name": "ecommerce-budget-forecaster",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "ecommerce-budget-forecaster",
+      "description": "Build rolling operating budgets for revenue, marketing, and inventory with seasonal adjustments, variance analysis, and performance benchmarks.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\ecommerce-budget-forecaster"
+    },
+    {
+      "id": "27_ecommerce-financial-dashboard",
+      "name": "ecommerce-financial-dashboard",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "ecommerce-financial-dashboard",
+      "description": "Build integrated P&L, balance sheet, and cash flow dashboards with ecommerce-specific waterfalls and channel-level drill-downs.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\ecommerce-financial-dashboard"
+    },
+    {
+      "id": "27_ecommerce-marketing",
+      "name": "ecommerce-marketing",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "ecommerce-marketing",
+      "description": "E-commerce marketing orchestrator that routes user requests to 19 specialized marketing skills. Use when user mentions marketing strategy, product promotion, social media campaign, increase sales, launch product, conversion optimization, Instagram marketing, TikTok marketing, 小红书推广, Facebook ads, Google ads, product description, landing page, SEO, content calendar, marketing ROI, or any e-commerce marketing goal — even if they don't use the word \"marketing\" explicitly. Also trigger for questions like \"how do I get more customers\", \"nobody is buying my product\", \"I need to grow my store\", or \"帮我推广产品\".",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\ecommerce-marketing"
+    },
+    {
+      "id": "27_ecommerce-sales-dashboard",
+      "name": "ecommerce-sales-dashboard",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "ecommerce-sales-dashboard",
+      "description": "Design and implement comprehensive sales dashboards to track revenue, AOV, conversion rates, and channel performance. Establish a single source of truth for daily, weekly, and monthly executive reporting.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\ecommerce-sales-dashboard"
+    },
+    {
+      "id": "27_email-automation-flow-builder",
+      "name": "email-automation-flow-builder",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "email-automation-flow-builder",
+      "description": "Build automated email sequences for welcome, post-purchase, browse abandonment, and win-back to maximize customer lifetime value.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\email-automation-flow-builder"
+    },
+    {
+      "id": "[Harvest-SubAgent] Gmail 浏览器草稿发送与截图验证",
+      "name": "[Harvest-SubAgent] Gmail 浏览器草稿发送与截图验证",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "gmail\\browser-draft-sender",
+      "description": "通过浏览器自动化完成 Gmail 草稿箱邮件发送、状态等待、已发送文件夹导航及完整界面截图。适用于 MCP API 无法直接操作已保存草稿，或业务方严格要求提供带完整信头与时间戳的视觉留痕凭证的跨境审计与合规场景。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\gmail\\browser-draft-sender"
+    },
+    {
+      "id": "[Harvest-SubAgent] Gmail 浏览器截图验证",
+      "name": "[Harvest-SubAgent] Gmail 浏览器截图验证",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "gmail\\browser-screenshot",
+      "description": "通过浏览器自动化对 Gmail 已发送邮件进行视觉验证并精准截图。适用于跨境业务中需要提供邮件收发凭证、展示完整信头（含收件人、签名档、正文图片）但程序化 API 无法满足合规格式要求的场景。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\gmail\\browser-screenshot"
+    },
+    {
+      "id": "27_gmail-assistant",
+      "name": "gmail-assistant",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "gmail-assistant",
+      "description": "Send, search, and manage Gmail messages with automatic delivery verification and smart draft workflow",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\gmail-assistant"
+    },
+    {
+      "id": "27_helpdesk-order-integration",
+      "name": "helpdesk-order-integration",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "helpdesk-order-integration",
+      "description": "Connect your customer support helpdesk to your ecommerce platform to surface real-time order data and automate VIP routing for faster issue resolution.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\helpdesk-order-integration"
+    },
+    {
+      "id": "27_influencer-campaign-manager",
+      "name": "influencer-campaign-manager",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "influencer-campaign-manager",
+      "description": "Scale creator collaborations and measure multi-channel ROI when moving from manual outreach to high-volume performance-driven influencer programs.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\influencer-campaign-manager"
+    },
+    {
+      "id": "27_launch-strategy",
+      "name": "launch-strategy",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "launch-strategy",
+      "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' or 'product update.' This skill covers phased launches, channel strategy, and ongoing launch momentum.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\launch-strategy"
+    },
+    {
+      "id": "27_lifecycle-marketing-automator",
+      "name": "lifecycle-marketing-automator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "lifecycle-marketing-automator",
+      "description": "Map customer journey stages from first visit to loyal advocate with personalized messaging, triggered workflows, and segment-based campaign automation.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\lifecycle-marketing-automator"
+    },
+    {
+      "id": "27_loyalty-points-designer",
+      "name": "loyalty-points-designer",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "loyalty-points-designer",
+      "description": "Implement a tiered reward system to increase customer retention and lifetime value through points-based incentives and VIP benefits",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\loyalty-points-designer"
+    },
+    {
+      "id": "27_market-insight-product-selection",
+      "name": "market-insight-product-selection",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "market-insight-product-selection",
+      "description": "Adaptive product-selection methodology built on multi-source signals and \"voice of customer\" (VoC): validate demand, momentum, competitive intensity, and user pain points from reviews/comments to produce a confident shortlist or a focused go/no-go. **When to use**:\n  - User is asking about trends/popularity (Tiktok/Amazon/etc.), or what's selling well in a market (US/UK/etc.)\n  - User asks for **single-category / single-product** trend analysis\n  - User wants market analysis, market research, or competitive landscape insights\n  - User is researching consumer preferences, demand patterns, or market dynamics\n  - User needs help deciding what products to sell, source, or invest in\n  - User is exploring product opportunities, winning products, or profitable niches",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\market-insight-product-selection"
+    },
+    {
+      "id": "27_market-viability-logic-auditor",
+      "name": "market-viability-logic-auditor",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "market-viability-logic-auditor",
+      "description": "Evaluates cross-platform product/market feasibility using a risk-first framework — screens for exclusion filters, validates market thresholds, and audits profitability. Use when making go/no-go decisions on product ideas, assessing product viability, risk, and market entry feasibility across e-commerce channels (Amazon, Shopify, Etsy, TikTok Shop, independent DTC, etc.).",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\market-viability-logic-auditor"
+    },
+    {
+      "id": "[Harvest-SubAgent] 亚太中东B2B线索深度挖掘",
+      "name": "[Harvest-SubAgent] 亚太中东B2B线索深度挖掘",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-apac-me-lead-mining",
+      "description": "当需要针对澳大利亚、中东、日韩等特定时区市场开发户外或灭蚊灯品类B2B客户时触发。执行LinkedIn负责人姓名挖掘、个人工作邮箱模式构造及SMTP真实性验证，并严格比对主数据库以排除重复记录，确保输出高质量增量线索。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-apac-me-lead-mining"
+    },
+    {
+      "id": "[Harvest] 跨境B2B外贸获客与开发",
+      "name": "[Harvest] 跨境B2B外贸获客与开发",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-export-outreach",
+      "description": "针对跨境工厂及 B2B 供应商设计的获客流程。涵盖从 Amazon/Shopify 等平台挖掘潜在卖家、深度调研并验证负责人联系方式、发送个性化开发信及话术迭代的闭环操作。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-export-outreach"
+    },
+    {
+      "id": "[Harvest] 跨境B2B全球时区滚动开发",
+      "name": "[Harvest] 跨境B2B全球时区滚动开发",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-global-rolling-outreach",
+      "description": "针对全球不同市场时区建立每日三轮（早、中、晚）高强度外贸开发任务，包含 50+ 规模的“极限测试”标准设定，并解决 Gmail API 发信后的可视性验证与 HTML 转义坑点。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-global-rolling-outreach"
+    },
+    {
+      "id": "[Harvest] 跨境B2B获客真实性审计",
+      "name": "[Harvest] 跨境B2B获客真实性审计",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-lead-authenticity-audit",
+      "description": "当用户质疑获客质量、认为自动化流程在“应付工作”或要求核实邮件真实性时，通过 LinkedIn 深度核查联系人身份、职能及公司背景，确认为真实有效的决策人而非虚构或过时数据。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-lead-authenticity-audit"
+    },
+    {
+      "id": "[Harvest-SubAgent] B2B LinkedIn Web搜索挖掘",
+      "name": "[Harvest-SubAgent] B2B LinkedIn Web搜索挖掘",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-linkedin-websearch-mining",
+      "description": "针对缺乏专业CRM或SMTP探测工具的受限环境，提供一套基于高级Web搜索语法（LinkedIn精确角色定位、第三方数据平台公开索引交叉验证）批量挖掘、核验并导出B2B负责人有效联系方式的标准化替代工作流，适用于快速拓客与线索冷启动场景。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-linkedin-websearch-mining"
+    },
+    {
+      "id": "[Harvest] 跨境获客本地化归档与留痕",
+      "name": "[Harvest] 跨境获客本地化归档与留痕",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-local-lead-archiving",
+      "description": "针对外贸场景中“数据不存C盘”且目标磁盘根目录受限的合规性要求，通过路径权限探测、工作区中转存储及生成自动化迁移脚本（.bat/ps1），实现获客资产在复杂权限环境下的安全留痕与桌面快捷访问。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-local-lead-archiving"
+    },
+    {
+      "id": "[Harvest-SubAgent] 多市场B2B线索深度挖掘",
+      "name": "[Harvest-SubAgent] 多市场B2B线索深度挖掘",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-multi-market-lead-mining",
+      "description": "针对美、加、英、法、德等指定市场，深度挖掘特定品类（如户外防虫产品）的B2B客户负责人。涵盖零售商自有品牌、专业批发商及高销量在线品牌的采购/类目经理信息获取、LinkedIn证据链构建、SMTP模拟验证及主数据库排重。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-multi-market-lead-mining"
+    },
+    {
+      "id": "[Harvest] 外贸自动化脚本执行与投递验证",
+      "name": "[Harvest] 外贸自动化脚本执行与投递验证",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-outreach-automation-verification",
+      "description": "管理 B2B 自动化开发信脚本的执行全流程。针对后台运行脚本提供状态监控、异常日志处理，以及在执行反馈缺失时通过 Gmail 发件箱进行物理投递确认的闭环逻辑，确保开发任务不丢包、不重发。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-outreach-automation-verification"
+    },
+    {
+      "id": "[Harvest] 跨境B2B外贸自动化投递与回邮复盘",
+      "name": "[Harvest] 跨境B2B外贸自动化投递与回邮复盘",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-outreach-loop",
+      "description": "针对高频获客场景，通过编写自动化脚本与配置定时任务，实现基于客户时区的开发信分发、收件箱监控及回复率统计。适用于需要维持每日获客KPI并实现数据驱动的话术优化过程。该技能涵盖了脚本构建、Cron定时配置以及基于Gmail工具的回复匹配逻辑，能够显著降低外贸业务员的重复性劳动。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-outreach-loop"
+    },
+    {
+      "id": "[Harvest] B2B 开发信任务补回与自动化执行",
+      "name": "[Harvest] B2B 开发信任务补回与自动化执行",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-outreach-recovery",
+      "description": "用于处理因电脑离线等原因导致的定时 B2B 外贸开发任务中断。通过审计 Accio 内部日志文件（Diary）确定缺失天数，并结合子代理并行挖掘与 Python 批量脚本，快速补齐获客线索并执行补发投递。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-outreach-recovery"
+    },
+    {
+      "id": "[Harvest] 外贸开发信标准化与资产固化",
+      "name": "[Harvest] 外贸开发信标准化与资产固化",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-outreach-standardization",
+      "description": "针对跨境 B2B 开发场景，从成功案例中提取并固化视觉规范、HTML 模板及产品素材，建立长期可复用的“金牌标准”手册。通过 PowerShell 素材下载、发件箱渲染核验及脚本逻辑封装，解决 Windows 环境下路径冲突、HTML 源码泄露等执行痛点。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-outreach-standardization"
+    },
+    {
+      "id": "[Harvest] 定时外贸开发信试运行",
+      "name": "[Harvest] 定时外贸开发信试运行",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\b2b-scheduled-outreach-trial",
+      "description": "设置并自动执行定时 B2B 获客与开发信任务。适用于外贸场景，通过 cron 调度 Agent 触发多步工作流，涵盖 Amazon/eBay 卖家挖掘、品牌联系人深度验证、以及个性化开发信撰写。重点解决了在命令行环境中发送包含引号和换行符的复杂 JSON 邮件正文时的转义失败问题，通过本地文件缓存确保投递的可靠性。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\b2b-scheduled-outreach-trial"
+    },
+    {
+      "id": "[Harvest] 批量 Gmail 开发信发送 (Python 桥接版)",
+      "name": "[Harvest] 批量 Gmail 开发信发送 (Python 桥接版)",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\batch-gmail-json-sender",
+      "description": "在 Windows/PowerShell 环境下，通过 Python 脚本批量读取本地 JSON 邮件文件并调用 Gmail MCP 工具发送开发信。该方法有效避开了命令行直接传递复杂 JSON 字符串时的转义错误、编码冲突及进程超时问题，适用于跨境 B2B 大规模邮件投递场景。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\batch-gmail-json-sender"
+    },
+    {
+      "id": "[Harvest] 定时外贸获客与本地化归档",
+      "name": "[Harvest] 定时外贸获客与本地化归档",
+      "version": "",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "marketing\\scheduled-b2b-prospecting",
+      "description": "设置并执行定时自动化 B2B 获客任务。通过 cron 调度多平台（Amazon/eBay）搜索、背调与验证流程。强制要求将结果以表格形式（CSV/Excel）保存至本地，以满足“结果导向”及数据留痕的业务要求。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing\\scheduled-b2b-prospecting"
+    },
+    {
+      "id": "27_marketing-ideas",
+      "name": "marketing-ideas",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "marketing-ideas",
+      "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' or 'ideas to grow.' This skill provides 140 proven marketing approaches organized by category.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing-ideas"
+    },
+    {
+      "id": "27_marketing-psychology",
+      "name": "marketing-psychology",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "marketing-psychology",
+      "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' or 'consumer behavior.' This skill provides 70+ mental models organized for marketing application.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing-psychology"
+    },
+    {
+      "id": "27_marketing-roas-analyzer",
+      "name": "marketing-roas-analyzer",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "marketing-roas-analyzer",
+      "description": "Track and analyze marketing spend across all channels with ROAS calculation, incrementality testing, and budget reallocation based on true profitability.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\marketing-roas-analyzer"
+    },
+    {
+      "id": "27_org-structure-research",
+      "name": "org-structure-research",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "org-structure-research",
+      "description": "Systematically research a company's organizational structure, build org charts, and create employee profiles per business line. Use when the user asks to \"调研组织架构\", \"org chart\", \"组织架构图\", \"员工画像\", \"业务线/部门结构\", or \"research [company] team structure and key people\".",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\org-structure-research"
+    },
+    {
+      "id": "27_people-research",
+      "name": "people-research",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "people-research",
+      "description": "People research using Exa search. Finds LinkedIn profiles, professional backgrounds, experts, team members, and public bios across the web. Use when searching for people, finding experts, or looking up professional profiles.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\people-research"
+    },
+    {
+      "id": "27_product-attribute-analyzer",
+      "name": "product-attribute-analyzer",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "product-attribute-analyzer",
+      "description": "Profiles product attributes across top sellers using 3-D tagging (structural/fit, material/process, design elements), calculates sales-weighted market share from real sales data, and outputs quantitative analysis plus pie-chart visualizations per dimension. Use when defining manufacturing specs, identifying mainstream product configurations, or spotting design trends in an Amazon category.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-attribute-analyzer"
+    },
+    {
+      "id": "27_product-description-generator",
+      "name": "product-description-generator",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "product-description-generator",
+      "description": "Generate SEO-optimized product descriptions for e-commerce platforms (Amazon, Shopify, eBay, Etsy). Create compelling, conversion-focused copy with keywords, features, benefits, and calls-to-action. Use when creating product listings, optimizing existing descriptions, or generating bulk product copy.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-description-generator"
+    },
+    {
+      "id": "27_product-launch-planner",
+      "name": "product-launch-planner",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "product-launch-planner",
+      "description": "Orchestrate multi-phase product launches using pre-launch waitlists, tiered early access, and coordinated multi-channel marketing to maximize day-one velocity and long-term momentum.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-launch-planner"
+    },
+    {
+      "id": "27_product-marketing-brief",
+      "name": "product-marketing-brief",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "product-marketing-brief",
+      "description": "Synthesize product features and customer insights into a comprehensive marketing brief to guide messaging and sales positioning.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-marketing-brief"
+    },
+    {
+      "id": "27_product-marketing-context",
+      "name": "product-marketing-context",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "product-marketing-context",
+      "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' or wants to avoid repeating foundational information across marketing tasks. Creates `./product-marketing-context.md` that other marketing skills reference.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-marketing-context"
+    },
+    {
+      "id": "27_product-review-intelligence-collector",
+      "name": "product-review-intelligence-collector",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "product-review-intelligence-collector",
+      "description": "Automated product review collection and intelligence gathering from major e-commerce platforms (Amazon, TikTok, Walmart, etc.). Use this skill when the user wants to collect, analyze, and synthesize customer feedback for market research, competitor benchmarking, or identifying product improvement opportunities. It focuses on extraction strategies, data cleaning, and multi-dimensional analysis (pros/cons, scenarios, unmet needs).",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-review-intelligence-collector"
+    },
+    {
+      "id": "27_product-selection",
+      "name": "product-selection",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "product-selection",
+      "description": "Product selection workflow: industry research → consumer research → product selection → supplier matching. Evidence-first, multi-source validation. Use when user wants to select products, find trending items, analyze categories, discover follow-sell opportunities, or asks \"what to sell\", \"which products\", \"hot products\". Works with product-supplier-sourcing skill.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-selection"
+    },
+    {
+      "id": "27_product-supplier-sourcing",
+      "name": "product-supplier-sourcing",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "product-supplier-sourcing",
+      "description": "Product sourcing and supplier discovery. Use when the user wants to find products, compare items, search for suppliers, manufacturers, or factories on B2B platforms. Default source is alibaba.com via the `product_supplier_search` tool. If the user specifies another platform, look for available tools or methods for that platform.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\product-supplier-sourcing"
+    },
+    {
+      "id": "27_referral-program-builder",
+      "name": "referral-program-builder",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "referral-program-builder",
+      "description": "Architect and implement automated refer-a-friend programs with unique tracking links, tiered incentive structures, and robust fraud prevention logic to drive organic customer acquisition.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\referral-program-builder"
+    },
+    {
+      "id": "27_remotion",
+      "name": "remotion-best-practices",
+      "version": "0.0.67",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "remotion",
+      "description": "Best practices for Remotion - Video creation in React",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\remotion"
+    },
+    {
+      "id": "27_review-analyst-agent",
+      "name": "review-analyst-agent",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "review-analyst-agent",
+      "description": "Use this skill to analyze product reviews, find common issues, and prioritize improvements. Triggers: \"analyze reviews\", \"review analysis\", \"customer feedback\", \"what are people saying\", \"product reviews\", \"review sentiment\", \"find complaints\", \"customer complaints\", \"improvement recommendations\", \"voice of customer\", \"VOC analysis\", \"feedback analysis\" Outputs: Prioritized issues, sentiment analysis, improvement recommendations.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\review-analyst-agent"
+    },
+    {
+      "id": "27_review-request-automator",
+      "name": "review-request-automator",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "review-request-automator",
+      "description": "Design and automate post-purchase review collection workflows. Implement timed request sequences, multi-media incentives, and moderation logic to maximize social proof and conversion rates.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\review-request-automator"
+    },
+    {
+      "id": "27_sales-negotiator",
+      "name": "sales-negotiator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "sales-negotiator",
+      "description": "Expert sales negotiation strategist for B2B deal-making. Use when planning negotiation strategy, handling discount requests, closing deals, navigating procurement, or structuring win-win agreements. Covers anchoring, framing, BATNA development, multi-party negotiations, and contract terms. Use for enterprise deals, pricing discussions, and high-stakes negotiations.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\sales-negotiator"
+    },
+    {
+      "id": "27_scenario-driven-product-scout",
+      "name": "scenario-driven-product-scout",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "scenario-driven-product-scout",
+      "description": "Discovers product ideas using the \"Three Shopping Moments\" framework (Calendar / Life / Everyday) combined with 20 differentiation strategies. Generates beginner-friendly product concepts with positioning, keywords, variants, and validation steps. Use when brainstorming products for Etsy, POD, or e-commerce, or when planning seasonal product lines.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\scenario-driven-product-scout"
+    },
+    {
+      "id": "27_seasonal-campaign-automator",
+      "name": "seasonal-campaign-automator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "seasonal-campaign-automator",
+      "description": "Orchestrate and automate high-velocity seasonal marketing events (BFCM, Holidays, Prime Day). Implement discount scheduling, tiered access, and cross-channel coordination to maximize seasonal revenue peaks.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\seasonal-campaign-automator"
+    },
+    {
+      "id": "27_self-improvement",
+      "name": "self-improvement",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "self-improvement",
+      "description": "Captures learnings, errors, corrections, and self-reflections into daily diary for continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects you, (3) User requests a capability that doesn't exist, (4) An external API or tool fails, (5) Knowledge is outdated or incorrect, (6) A better approach is discovered, (7) You complete significant work and want to evaluate quality. Also review diary before major tasks.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\self-improvement"
+    },
+    {
+      "id": "27_seo-competitor-analysis",
+      "name": "seo-competitor-analysis",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "seo-competitor-analysis",
+      "description": "执行深度 SEO 竞争对手分析，包括关键词研究、外链检查和内容策略映射。当用户想要分析网站竞争对手或通过研究竞争对手来提升自身 SEO 排名时使用。",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\seo-competitor-analysis"
+    },
+    {
+      "id": "27_seo-keyword-research",
+      "name": "seo-keyword-research",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "seo-keyword-research",
+      "description": "Discover high-value keywords, classify search intent, and build topic clusters to drive organic traffic and AI visibility (GEO).",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\seo-keyword-research"
+    },
+    {
+      "id": "27_seo-page-audit",
+      "name": "seo-page-audit",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "seo-page-audit",
+      "description": "Audit a single web page's SEO performance, providing a 0-100 score and prioritized technical and content recommendations.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\seo-page-audit"
+    },
+    {
+      "id": "27_skill-creator",
+      "name": "skill-creator",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "skill-creator",
+      "description": "Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with variance analysis, or optimize a skill's description for better triggering accuracy.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\skill-creator"
+    },
+    {
+      "id": "27_skill-finder",
+      "name": "skill-finder",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "skill-finder",
+      "description": "Find, search, recommend, and install agent skills. Layered discovery — internal catalog (first-party, vetted) → skills.sh → web search → ClawHub / SkillsMP. Use when the user wants to find/search/discover/choose/install a skill, or asks \"how do I do X\", \"is there a skill for X\", \"find me something for X\", \"该用什么skill\", \"有没有XX的skill\", \"帮我找skill\", \"推荐一个skill\".",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\skill-finder"
+    },
+    {
+      "id": "27_skill-vetter",
+      "name": "skill-vetter",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "skill-vetter",
+      "description": "Security-first vetting for OpenClaw skills. Use before installing any skill from ClawHub, GitHub, or other sources. Checks for red flags, permission scope, and suspicious patterns.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\skill-vetter"
+    },
+    {
+      "id": "27_social-media-content-creator",
+      "name": "social-media-content-creator",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "social-media-content-creator",
+      "description": "Create platform-native content, repurpose assets, and implement data-driven social strategies for LinkedIn, X, Instagram, and TikTok.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\social-media-content-creator"
+    },
+    {
+      "id": "27_supplier-performance-manager",
+      "name": "supplier-performance-manager",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "supplier-performance-manager",
+      "description": "Systematically monitor and optimize supplier relationships. Implement purchase order workflows, performance scorecards, and lead-time tracking to ensure supply chain reliability and cost-efficiency.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\supplier-performance-manager"
+    },
+    {
+      "id": "27_sycm-analysis-skill",
+      "name": "sycm-analysis-skill",
+      "version": "0.0.75",
+      "enabled": false,
+      "kind": "directory",
+      "entryName": "sycm-analysis-skill",
+      "description": "Taobao Sycm (Business Advisor) data analysis tool. Uses browser sessions to call Sycm and retrieve store weekly report data.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\sycm-analysis-skill"
+    },
+    {
+      "id": "27_trend-stage-timing-analyzer",
+      "name": "trend-stage-timing-analyzer",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "trend-stage-timing-analyzer",
+      "description": "Determines whether a product is in early growth, peak momentum, or saturation by analyzing ad libraries (TikTok, Facebook), Google Trends, and marketplace traction. Use when validating product timing for Shopify, DTC, or dropshipping, or when assessing ad saturation and trend momentum.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\trend-stage-timing-analyzer"
+    },
+    {
+      "id": "27_vibe-marketing",
+      "name": "vibe-marketing",
+      "version": "0.0.75",
+      "enabled": true,
+      "kind": "directory",
+      "entryName": "vibe-marketing",
+      "description": "Apply 'Vibe Coding' principles to marketing: describe outcomes, iterate via AI, and prioritize speed and human edge over perfection.",
+      "installPath": "C:\\Users\\Lenovo\\.accio\\accounts\\1764981925_650006\\agents\\MID-65549293U1781578-A7771B-9348-969E79\\agent-core\\skills\\vibe-marketing"
+    }
+  ]
+}

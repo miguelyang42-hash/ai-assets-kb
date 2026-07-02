@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "V5 Payload Schema",
+  "type": "object",
+  "required": ["channel", "country", "segment", "v1_assessment", "v2_intelligence", "v3_insight", "v4_contacts", "v5_negotiation", "v6_templates", "v7_product_analysis", "v8_suggestions"],
+  "properties": {
+    "channel": {
+      "type": "string",
+      "enum": ["google", "instagram", "facebook", "linkedin", "tiktok", "manual"],
+      "description": "数据来源渠道"
+    },
+    "country":  {"type": "string", "description": "目标国家中文名，如：美国/欧洲/日本"},
+    "segment":  {"type": "string", "description": "客群中文名，如：全屋定制"},
+    "v1_assessment": {
+      "type": "object",
+      "required": ["name_simple", "type", "basis", "rating"],
+      "properties": {
+        "name_simple": {"type": "string"},
+        "type":        {"type": "string"},
+        "basis":       {"type": "string"},
+        "rating":      {"type": "string"}
+      }
+    },
+    "v2_intelligence": {
+      "type": "object",
+      "required": ["company_full_name", "country", "website", "founded", "hq", "social"],
+      "properties": {
+        "company_full_name": {"type": "string"},
+        "country":  {"type": "string"},
+        "website":  {"type": "string"},
+        "founded":  {"type": "string"},
+        "hq":       {"type": "string"},
+        "social":   {"type": "string"}
+      }
+    },
+    "v3_insight": {
+      "type": "object",
+      "required": ["factory_scale", "market_position", "social_activity", "sourcing_logic", "tech_preference"],
+      "properties": {
+        "factory_scale":    {"type": "string"},
+        "market_position":  {"type": "string"},
+        "social_activity":  {"type": "string"},
+        "sourcing_logic":   {"type": "string"},
+        "tech_preference":  {"type": "string"}
+      }
+    },
+    "v4_contacts": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["name", "title", "email", "linkedin", "whatsapp", "touchpoint", "strategy"],
+        "properties": {
+          "name":       {"type": "string", "minLength": 1},
+          "title":      {"type": "string", "minLength": 1},
+          "email":      {"type": "string", "minLength": 5},
+          "linkedin":   {"type": "string"},
+          "whatsapp":   {"type": "string"},
+          "touchpoint": {"type": "string"},
+          "strategy":   {"type": "string"}
+        }
+      }
+    },
+    "v5_negotiation": {
+      "type": "object",
+      "required": ["situation", "pain_point", "solution"],
+      "properties": {
+        "situation":  {"type": "string"},
+        "pain_point": {"type": "string"},
+        "solution":   {"type": "string"}
+      }
+    },
+    "v6_templates": {
+      "type": "object",
+      "required": ["chinese", "english"],
+      "properties": {
+        "chinese": {"type": "string", "minLength": 30},
+        "english": {"type": "string", "minLength": 30}
+      }
+    },
+    "v7_product_analysis": {
+      "type": "object",
+      "required": ["pricing", "preference"],
+      "properties": {
+        "pricing":    {"type": "string"},
+        "preference": {"type": "string"}
+      }
+    },
+    "v8_suggestions": {
+      "type": "array",
+      "minItems": 3,
+      "items": {"type": "string"}
+    }
+  }
+}

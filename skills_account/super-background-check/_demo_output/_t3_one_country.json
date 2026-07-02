@@ -1,0 +1,160 @@
+{
+  "company_short": "Acme",
+  "company_full": "Acme Industrial Pumps Inc.",
+  "country": "USA",
+  "level": "A",
+  "date_str": "20260427",
+  "dim1_type": {
+    "customer_type": "工业设备品牌商 + 区域分销商",
+    "main_market": "北美 (美国/加拿大/墨西哥)",
+    "tier_reason": "年营收 $80M、500+ 员工、5 个分支机构、年进口额 $12M，符合 A 级标准"
+  },
+  "dim2_basic": {
+    "founded_year": "1985",
+    "hq_address": "1200 Industrial Blvd, Houston, TX 77002, USA",
+    "website": "https://www.acme-pumps.com",
+    "slogan": "Pumping Excellence Since 1985"
+  },
+  "dim3_scale": {
+    "employees": "520 (LinkedIn 数据)",
+    "revenue_usd": "$80M (2025 财报)",
+    "facility": "Houston 主厂 50,000 sqft + Austin 仓储 20,000 sqft",
+    "branches": "Houston / Austin / Phoenix / Toronto / Monterrey 共 5 处"
+  },
+  "dim4_business": {
+    "main_categories": "工业水泵 / 化工泵 / 消防泵 / 海水泵",
+    "sku_count": "约 1,200 SKU",
+    "price_range": "$500 - $50,000 单台",
+    "target_customers": "石油石化 / 市政水务 / 海洋工程 / 制造业",
+    "differentiation": "API 610 认证 + 24/7 现场服务 + 5 年质保"
+  },
+  "dim5_trade": {
+    "hs_codes": "8413.70 / 8413.81 / 8413.91",
+    "annual_import_value": "$12M (Panjiva 2025)",
+    "supplier_countries": "China (45%) / Vietnam (25%) / India (15%) / Italy (15%)",
+    "frequency": "月均 8-12 票",
+    "batch_size": "单批 $80K - $300K"
+  },
+  "dim6_contacts": [
+    {
+      "name": "John Smith",
+      "title": "CEO & Founder",
+      "email": "j.smith@acme-pumps.com",
+      "linkedin": "https://www.linkedin.com/in/johnsmith-acme",
+      "whatsapp": "未公开",
+      "touch": "LinkedIn 私信 + 高管峰会",
+      "strategy": "战略合作切入，强调 5 年质保 + 联合品牌",
+      "priority": "P0"
+    },
+    {
+      "name": "Mary Johnson",
+      "title": "VP of Procurement",
+      "email": "m.johnson@acme-pumps.com",
+      "linkedin": "https://www.linkedin.com/in/maryjohnson-acme",
+      "whatsapp": "未公开",
+      "touch": "邮件 + 电话",
+      "strategy": "降本切入，附 3 套报价对比 + 现成案例",
+      "priority": "P0"
+    },
+    {
+      "name": "David Lee",
+      "title": "Supply Chain Manager",
+      "email": "d.lee@acme-pumps.com",
+      "linkedin": "https://www.linkedin.com/in/davidlee-acme",
+      "whatsapp": "未公开",
+      "touch": "WhatsApp 工作日 9-17",
+      "strategy": "供货稳定性 + 物流时效切入",
+      "priority": "P1"
+    },
+    {
+      "name": "Sarah Brown",
+      "title": "R&D Lead",
+      "email": "s.brown@acme-pumps.com",
+      "linkedin": "https://www.linkedin.com/in/sarahbrown-acme",
+      "whatsapp": "未公开",
+      "touch": "技术白皮书 + LinkedIn 内容互动",
+      "strategy": "ODM/OEM 联合开发新品",
+      "priority": "P1"
+    },
+    {
+      "name": "Mike Garcia",
+      "title": "Sourcing Specialist",
+      "email": "m.garcia@acme-pumps.com",
+      "linkedin": "https://www.linkedin.com/in/mikegarcia-acme",
+      "whatsapp": "未公开",
+      "touch": "邮件 + 询盘平台",
+      "strategy": "提供样品 + 阶梯报价",
+      "priority": "P2"
+    }
+  ],
+  "dim7_social": {
+    "facebook": "https://www.facebook.com/acmepumps (12K followers)",
+    "instagram": "https://www.instagram.com/acme_pumps (3K followers)",
+    "linkedin": "https://www.linkedin.com/company/acme-industrial-pumps (15K followers)",
+    "youtube": "https://www.youtube.com/@acmepumps (产品演示视频 80+)",
+    "tiktok": "无官方账号",
+    "activity_summary": "LinkedIn 周更 2-3 篇案例文章；YouTube 月更 1-2 个产品视频；FB/IG 主要用于品牌宣传"
+  },
+  "dim8_risk": {
+    "funding_status": "私营 / 自有资金 / 无外部融资记录",
+    "lawsuits": "无重大诉讼 (PACER 2020-2025 检索)",
+    "negative_news": "无明显负面，2024 年因质保政策调整有少量客诉",
+    "credit_rating": "D&B PAYDEX 80 / A 级",
+    "blacklist": "否 (OFAC / EU / 海关黑名单均无记录)",
+    "risk_score": 85
+  },
+  "dim9_decision": "✅ 值得跟进",
+  "dim9_pitches": [
+    "切入 1【降本话术】Mary, 注意到 Acme 年进口 $12M, 我们可帮 8413.70 系列降本 12-18%, 可发 3 套报价对比, 是否方便周三 30 分钟视频?",
+    "切入 2【认证话术】David, Acme 强调 API 610 认证, 我厂同样持有 API 610 + ISO 9001, 可提供 5 个北美客户案例及交期表",
+    "切入 3【ODM 话术】Sarah, 看到 Acme 在做新品研发, 我们 R&D 团队可联合开发海水泵新型号, 已为 3 家欧洲品牌做过 ODM",
+    "切入 4【物流话术】David, 中国/越南到 Houston 双港口直发, 平均 28 天到港, 比东南亚转运快 12 天, 附详细物流方案",
+    "切入 5【售后话术】John, 5 年质保是 Acme 核心卖点, 我们可提供同等 5 年质保 + 免费技术培训, 帮助 Acme 维持品牌承诺"
+  ],
+  "dev_email_cn": "尊敬的 Mary 总监,\n\n您好! 我是 [Your Company] 的张华, 我们是 API 610 认证的工业水泵专业制造商, 在中国/越南均有工厂. 注意到 Acme Industrial Pumps 在北美工业水泵领域是公认的标杆品牌, 年进口额约 $12M.\n\n我们最近为 3 家美国 Tier-1 客户在 8413.70 系列上实现了 12-18% 的成本优化, 同时保持 API 610 标准. 想与您探讨在不影响 Acme 现有质保政策前提下, 联合优化采购成本的可能性.\n\n附件是 3 套定制报价对比 + 客户案例. 是否方便本周三或周四 30 分钟视频会议?\n\n期待您的回复.\n\n此致\n张华 | Senior Account Manager",
+  "dev_email_en": "Dear Ms. Johnson,\n\nGreetings from [Your Company]! I am Hua Zhang, working with an API 610 certified industrial pump manufacturer with facilities in China and Vietnam. We have noted that Acme Industrial Pumps is a recognized leader in North American industrial pumps, with annual imports around $12M.\n\nWe recently helped 3 US Tier-1 customers achieve 12-18% cost optimization on HS 8413.70 series pumps while maintaining API 610 standards. We would love to explore whether we can support Acme in optimizing procurement costs without affecting your current 5-year warranty commitment.\n\nAttached please find: (1) 3 customized quotation comparisons; (2) US client case studies. Would Wed or Thu this week work for a 30-minute video call?\n\nLooking forward to your reply.\n\nBest regards,\nHua Zhang | Senior Account Manager",
+  "dim10_trade": {
+    "annual_import_total_usd": "USD 12,500,000",
+    "annual_revenue_usd": "USD 85,000,000",
+    "import_to_revenue_ratio": "14.7%",
+    "data_year": "2025",
+    "data_source": "Panjiva 海关报关数据",
+    "data_source_url": "https://panjiva.com/Acme-Industrial-Pumps-Inc/123456",
+    "import_breakdown": [
+      {
+        "country": "中国",
+        "amount_usd": "USD 6,800,000",
+        "share_pct": "54.4%",
+        "main_categories": "工业水泵 / 化工泵 / 海水泵",
+        "top_suppliers": "山东金泵 / 浙江海宇泵业 / 上海凯泉"
+      }
+    ]
+  },
+  "data_sources": [
+    {
+      "source": "LinkedIn Company Page",
+      "url": "https://www.linkedin.com/company/acme-industrial-pumps",
+      "fetched_at": "2026-04-27 14:00"
+    },
+    {
+      "source": "Panjiva Trade Data",
+      "url": "https://panjiva.com/Acme-Industrial-Pumps-Inc/123456",
+      "fetched_at": "2026-04-27 14:05"
+    },
+    {
+      "source": "Crunchbase Profile",
+      "url": "https://www.crunchbase.com/organization/acme-industrial-pumps",
+      "fetched_at": "2026-04-27 14:10"
+    },
+    {
+      "source": "Official Website",
+      "url": "https://www.acme-pumps.com/about",
+      "fetched_at": "2026-04-27 14:15"
+    },
+    {
+      "source": "D&B Credit Report",
+      "url": "https://www.dnb.com/business-directory/company/acme-industrial-pumps",
+      "fetched_at": "2026-04-27 14:20"
+    }
+  ]
+}

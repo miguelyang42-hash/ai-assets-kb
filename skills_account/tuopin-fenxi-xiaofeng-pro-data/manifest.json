@@ -1,0 +1,33 @@
+{
+  "name": "tuopin-fenxi-xiaofeng-pro-data",
+  "version": "3.1.0",
+  "author": "Accio Work × 小蜂学掌",
+  "created_at": "2026-05-06T00:00:00+08:00",
+  "updated_at": "2026-05-09T00:00:00+08:00",
+  "changelog": "v3.1.0 - 文件路径强制输出：脚本使用 path.resolve() 打印绝对路径通知框，SKILL.md 新增交付格式铁律",
+  "schema": "./schemas/payload.schema.json",
+  "entry": "./scripts/generate_visual_report.js",
+  "dependencies": ["docx@^8.5.0"],
+  "brand": {
+    "name": "小蜂学掌",
+    "name_en": "BEE-EDUCATION",
+    "slogan": "专注外贸增长 · 工业级选品方法论",
+    "footer": "© 小蜂学掌  内部资料 · 请勿外传",
+    "website": "www.xfxz123.com"
+  },
+  "report": {
+    "orientation": "landscape",
+    "output_name_pattern": "{product}拓品报告{YYYYMMDD}（小蜂学掌）.docx",
+    "sections": [
+      "01 项目背景（封面合并）",
+      "02 A象限",
+      "03 B象限",
+      "04 C象限",
+      "05 D象限",
+      "06 落地建议（12条）",
+      "07 数据来源"
+    ],
+    "brand_header": true,
+    "brand_footer": true
+  }
+}

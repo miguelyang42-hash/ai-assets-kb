@@ -1,0 +1,101 @@
+## 1. Problem Judgment (问题诊断)
+
+问题诊断：高货值设备导致的客户现金流压力。
+谈判类型：支付条款博弈（Payment Terms Negotiation）。
+当前阶段：成交前方案确定阶段。
+客户类型：待确认（建议先核实新老客户）。
+核心风险：分期付款（尤其是发货后的分期）会给我方带来巨大的坏账风险和资金压力；灌装机通常涉及定制，若客户中途违约，损失巨大。
+核心机会：利用付款方案的优化替代直接降价，锁定订单。
+
+## 2. Case Match (案例匹配)
+
+案例 1: 12-case-cards-delivery-payment.md / CASE-PAYMENT-003 / Client pushes for longer terms
+案例摘要：当客户要求长账期或分期时，应通过解释生产成本和资金压力来回绝"纯分期"，转而推行基于"进度"的阶梯付款。
+回复思维：分期可以，但必须与生产节点（Node）挂钩，而非时间。
+
+案例 2: 03-email-case-library.md / SRC-003 / Case 108 customer asks for O/A or post-delivery payment
+案例摘要：明确指出高价值定制设备无法接受发货后的延期支付，但可以增加第三方金融保障或分阶段支付。
+回复思维：底线是发货前必须付清。
+
+案例 3: 12-case-cards-delivery-payment.md / CASE-PAYMENT-005 / Installment payment for high-value customized equipment
+案例摘要：高价值定制设备不能接受发货后分期，应转为基于生产节点的阶梯付款（30-40-30），或建议客户使用L/C。
+回复思维：将"时间分期"转化为"进度付款"，用定制化属性作为合理理由。
+
+## 3. Response Strategy (应对策略)
+
+第一步（Acknowledge）：表达对客户投资预算的理解，强调我们致力于帮助其达成项目。
+
+第二步（Counter-offer）：拒绝传统的"月供分期"，转为"生产进度阶梯付款"方案：
+a. 方案A（3-4-3模式）：30%定金，40%生产过半/视频验收后，30%发货前。
+b. 方案B（信用证L/C）：如果客户确实资金紧张，建议其开具不可撤销信用证，通过银行信用背书，缓解我方风险。
+c. 方案C（金融租赁/融资）：如果有相关渠道，建议客户通过当地金融机构融资。
+
+切忌说：
+· "我们公司绝对不接受分期。"（太死板，会赶走客户）
+· "你可以等收到货后再付剩下的钱。"（风险极大，绝对禁止）
+
+可让步筹码（由小到大）：
+1. 延长定金支付期限（如签约后15天内）
+2. 调整中期款比例（如35%而非40%）
+3. 增加5%质保尾款（发货后30天内支付）
+4. 接受L/C at sight替代T/T
+
+## 4. Email Drafts (邮件草案)
+
+中文邮件草案（Chinese email）
+
+主题：关于灌装机项目付款方案的优化建议
+
+亲爱的[客户名]，
+
+感谢您的坦诚沟通。我们非常理解灌装机作为一项重大资产投资，确实涉及较大的资金安排。
+
+为了支持您的项目顺利启动，同时确保生产环节的物料采购和工艺进度，我与财务团队深入讨论后，为您申请了一个基于"生产进度"的阶梯式付款方案，这可以最大程度减轻您的前期资金压力：
+
+1. 首期定金（30%）：用于启动设计与核心零部件的采购。
+2. 中期进度款（40%）：在设备完成组装并通过视频初步验收后支付。
+3. 尾款（30%）：在工厂完成最终全检并在发货前支付。
+
+这种方案能确保您的资金随着项目的实际进展而投入，同时也符合我们对定制化高价值设备的风控要求。您看这个方案是否更符合您的财务预算？
+
+祝商祺，
+[您的名字]
+
+英文邮件草案（English draft）
+
+Subject: Proposal for optimized payment terms for the Filling Machine project
+
+Dear [Customer Name],
+
+Thank you for your feedback. We fully understand that the filling machine is a significant investment and requires careful financial planning.
+
+To support your project and alleviate your initial cash flow pressure while ensuring the production schedule, I have discussed with our financial team and proposed a "Milestone-based Payment Plan":
+
+1. 30% Deposit: To initiate the design phase and raw material procurement.
+2. 40% Mid-term Payment: To be paid after the machine assembly is completed and verified by a pre-inspection video.
+3. 30% Balance: To be paid after the final QC in our factory and before shipment.
+
+This structure allows you to allocate funds according to the actual progress of the project, which is a common practice for high-value customized equipment. Please let me know if this works better for your current budget.
+
+Best regards,
+[Your Name]
+
+## 5. WhatsApp Quick Replies (快捷短句)
+
+中文快捷短句（CN）
+1. 理解灌装机金额较大，资金安排确实重要。
+2. 传统的发货后分期我们很难操作，但可以为您申请"按生产进度分阶段支付"的方案。
+3. 比如30%定金启动，中间验收付40%，发货前付30%，这样能减轻您的压力吗？
+4. 这样您的资金是跟着进度走的，您觉得这个方案怎么样？
+
+英文快捷短句（EN）
+1. I totally understand the filling machine is a big investment. Cash flow is key!
+2. While we can't do post-delivery installments, I can apply for a "Milestone Payment Plan" for you.
+3. How about 30% deposit, 40% after mid-term inspection, and 30% before shipping?
+4. This way, your funds move with the production progress. What do you think?
+
+## 6. Next-Step Advice (后续行动建议)
+
+1. 查背景：核实客户是新客户还是老客户，老客户可以适当降低首付比例，但发货前必须付清。
+2. 推金融工具：如果客户坚持要货后分期，建议询问其是否能开具L/C（信用证），这是规避分期风险的最佳替代方案。
+3. 强调定制化：在沟通中不经意地提及设备是根据其瓶型/容量"Customized（定制）"的，从而暗示我方承担的物料风险。

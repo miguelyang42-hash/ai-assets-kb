@@ -1,0 +1,200 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Super Background Check Payload",
+  "type": "object",
+  "required": [
+    "company_short", "company_full", "country", "level", "date_str",
+    "dim1_type", "dim2_basic", "dim3_scale", "dim4_business",
+    "dim5_trade", "dim6_contacts", "dim7_social", "dim8_risk",
+    "dim9_decision", "dim9_pitches", "dev_email_cn", "dev_email_en", "data_sources",
+    "dim10_trade"
+  ],
+  "properties": {
+    "company_short": { "type": "string", "minLength": 1 },
+    "company_full":  { "type": "string", "minLength": 1 },
+    "country":       { "type": "string", "minLength": 1 },
+    "level":         { "type": "string", "enum": ["A", "B", "C"] },
+    "date_str":      { "type": "string", "pattern": "^[0-9]{8}$" },
+
+    "dim1_type": {
+      "type": "object",
+      "required": ["customer_type", "main_market", "tier_reason"],
+      "properties": {
+        "customer_type": { "type": "string" },
+        "main_market":   { "type": "string" },
+        "tier_reason":   { "type": "string" }
+      }
+    },
+    "dim2_basic": {
+      "type": "object",
+      "required": ["founded_year", "hq_address", "website", "slogan"],
+      "properties": {
+        "founded_year": { "type": "string" },
+        "hq_address":   { "type": "string" },
+        "website":      { "type": "string" },
+        "slogan":       { "type": "string" }
+      }
+    },
+    "dim3_scale": {
+      "type": "object",
+      "required": ["employees", "revenue_usd", "facility", "branches"],
+      "properties": {
+        "employees":   { "type": "string" },
+        "revenue_usd": { "type": "string" },
+        "facility":    { "type": "string" },
+        "branches":    { "type": "string" }
+      }
+    },
+    "dim4_business": {
+      "type": "object",
+      "required": ["main_categories", "sku_count", "price_range", "target_customers", "differentiation"],
+      "properties": {
+        "main_categories":  { "type": "string" },
+        "sku_count":        { "type": "string" },
+        "price_range":      { "type": "string" },
+        "target_customers": { "type": "string" },
+        "differentiation":  { "type": "string" }
+      }
+    },
+    "dim5_trade": {
+      "type": "object",
+      "required": ["hs_codes", "annual_import_value", "supplier_countries", "frequency", "batch_size"],
+      "properties": {
+        "hs_codes":            { "type": "string" },
+        "annual_import_value": { "type": "string" },
+        "supplier_countries":  { "type": "string" },
+        "frequency":           { "type": "string" },
+        "batch_size":          { "type": "string" }
+      }
+    },
+    "dim6_contacts": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["name", "title", "email", "linkedin", "whatsapp", "touch", "strategy", "priority"],
+        "properties": {
+          "name":     { "type": "string" },
+          "title":    { "type": "string" },
+          "email":    { "type": "string" },
+          "linkedin": { "type": "string" },
+          "whatsapp": {
+            "type": "string",
+            "description": "Must be E.164 format (e.g. +14155552671) OR literal '未公开' if not publicly available. NEVER fabricate.",
+            "pattern": "^(\\+[1-9][0-9]{6,14}|未公开)$"
+          },
+          "touch":    { "type": "string" },
+          "strategy": { "type": "string" },
+          "priority": { "type": "string", "enum": ["P0", "P1", "P2"] }
+        }
+      }
+    },
+    "dim7_social": {
+      "type": "object",
+      "properties": {
+        "facebook":  { "type": "string" },
+        "instagram": { "type": "string" },
+        "linkedin":  { "type": "string" },
+        "youtube":   { "type": "string" },
+        "tiktok":    { "type": "string" },
+        "activity_summary": { "type": "string" }
+      }
+    },
+    "dim8_risk": {
+      "type": "object",
+      "required": ["funding_status", "lawsuits", "negative_news", "credit_rating", "blacklist", "risk_score"],
+      "properties": {
+        "funding_status": { "type": "string" },
+        "lawsuits":       { "type": "string" },
+        "negative_news":  { "type": "string" },
+        "credit_rating":  { "type": "string" },
+        "blacklist":      { "type": "string" },
+        "risk_score":     { "type": "integer", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "dim9_decision": {
+      "type": "string",
+      "enum": ["✅ 值得跟进", "⚠️ 持续观察", "❌ 暂时放弃"]
+    },
+    "dim9_pitches": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": { "type": "string", "minLength": 20 }
+    },
+    "dev_email_cn": { "type": "string", "minLength": 50 },
+    "dev_email_en": { "type": "string", "minLength": 50 },
+    "data_sources": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["source", "url", "fetched_at"],
+        "properties": {
+          "source":     { "type": "string" },
+          "url":        { "type": "string" },
+          "fetched_at": { "type": "string" }
+        }
+      }
+    },
+    "dim10_trade": {
+      "type": "object",
+      "description": "进出口贸易数据 - 第 10 维（v2.5 新增）。所有字段必填，缺失填'暂未找到'。",
+      "required": [
+        "annual_import_total_usd",
+        "annual_revenue_usd",
+        "import_to_revenue_ratio",
+        "data_year",
+        "data_source",
+        "data_source_url",
+        "import_breakdown"
+      ],
+      "properties": {
+        "annual_import_total_usd": {
+          "type": "string",
+          "description": "客户年度总进口额。必须含 USD 前缀，例如 'USD 12,500,000' 或 'USD 12.5M'。无数据时填 '暂未找到'。",
+          "minLength": 3
+        },
+        "annual_revenue_usd": {
+          "type": "string",
+          "description": "客户年度销售总额。必须含 USD 前缀，例如 'USD 85,000,000' 或 'USD 85M'。无数据时填 '暂未找到'。",
+          "minLength": 3
+        },
+        "import_to_revenue_ratio": {
+          "type": "string",
+          "description": "进口占销售额比例，例如 '14.7%'。无法计算填 '暂未找到'。",
+          "minLength": 1
+        },
+        "data_year": {
+          "type": "string",
+          "description": "数据年份，例如 '2025'。",
+          "pattern": "^[0-9]{4}$"
+        },
+        "data_source": {
+          "type": "string",
+          "description": "数据来源，例如 'Panjiva' / 'ImportYeti' / '中国海关'。"
+        },
+        "data_source_url": {
+          "type": "string",
+          "description": "数据来源 URL（必须可访问）。"
+        },
+        "import_breakdown": {
+          "type": "array",
+          "minItems": 3,
+          "description": "分国家进口明细，至少 3 个国家。",
+          "items": {
+            "type": "object",
+            "required": ["country", "amount_usd", "share_pct", "main_categories", "top_suppliers"],
+            "properties": {
+              "country":         { "type": "string", "minLength": 1 },
+              "amount_usd":      { "type": "string", "minLength": 3, "description": "必须含 USD 前缀" },
+              "share_pct":       { "type": "string", "minLength": 1 },
+              "main_categories": { "type": "string", "minLength": 1 },
+              "top_suppliers":   { "type": "string", "minLength": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}

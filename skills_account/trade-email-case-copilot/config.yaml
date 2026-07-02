@@ -1,0 +1,266 @@
+# Trade Email Case Copilot - Configuration
+# Version 2.0.0
+
+skill:
+  name: trade-email-case-copilot
+  version: "2.0.0"
+  description: >
+    Foreign-trade customer email negotiation assistant.
+    Matches bundled email negotiation cases (300+ scenarios),
+    extracts reply logic, and drafts Chinese/English email
+    or short chat replies with anonymized case knowledge.
+  author: trade-copilot-team
+  language: [zh, en]
+
+# Output contract — 6 mandatory dimensions
+output:
+  dimensions:
+    - id: problem_judgment
+      label_zh: 问题诊断
+      label_en: Problem Judgment
+      required: true
+      sub_fields:
+        - issue_category
+        - negotiation_type
+        - current_stage
+        - customer_status
+        - core_risk
+        - core_opportunity
+    - id: case_match
+      label_zh: 案例匹配
+      label_en: Case Match
+      required: true
+      min_cases: 3
+      fields_per_case:
+        - source
+        - case_excerpt
+        - reply_mindset
+    - id: response_strategy
+      label_zh: 应对策略
+      label_en: Response Strategy
+      required: true
+      sub_fields:
+        - step_acknowledge
+        - step_counter_offer
+        - what_not_to_say_min: 2
+        - tradeable_concessions
+    - id: email_drafts
+      label_zh: 邮件草案
+      label_en: Email Drafts
+      required: true
+      skippable_in: [analysis_only]
+      includes:
+        - chinese_email_with_subject
+        - english_email_with_subject
+    - id: whatsapp_quick_replies
+      label_zh: 快捷短句
+      label_en: WhatsApp Quick Replies
+      required: true
+      skippable_in: [analysis_only]
+      lines_per_language: 4
+      expanded_lines_chat_primary: 8
+      progressive_pattern:
+        - empathy
+        - pivot
+        - concrete_offer
+        - gentle_close
+    - id: next_step_advice
+      label_zh: 后续行动建议
+      label_en: Next-Step Advice
+      required: true
+      min_items: 2
+      max_items: 4
+
+  # Output stability enforcement
+  stability:
+    dimension_order: fixed
+    dimension_names: fixed
+    sub_field_names: fixed
+    citation_format: "reference file / source block / case theme"
+    no_match_statement_zh: "无精确匹配案例；使用最接近的案例推理。"
+    no_match_statement_en: "No exact bundled match; using the closest case-based reasoning."
+
+  # Output modes
+  modes:
+    full:
+      dimensions: [1, 2, 3, 4, 5, 6]
+    analysis_only:
+      dimensions: [1, 2, 3, 6]
+      triggers: ["帮我分析", "just analyze", "先不用写邮件", "analysis only", "只要分析"]
+    english_only:
+      dimensions: [1, 2, 3, 4, 5, 6]
+      language_override: en
+      triggers: ["只要英文", "English only", "just English"]
+    chat_primary:
+      dimensions: [1, 2, 3, 4, 5, 6]
+      primary_dimension: 5
+      triggers: ["WhatsApp", "chat", "聊天回复", "快捷回复"]
+
+  languages:
+    - zh
+    - en
+  quick_reply_count: 4
+
+# Routing — case-card file mapping
+routing:
+  categories:
+    samples:
+      file: references/10-case-cards-samples.md
+      keywords_en: [sample, proof, prototype, test unit, proofing, sampling, resample, sample fee, sample cost]
+      keywords_zh: [样品, 打样, 样板, 试样, 寄样, 测样, 样品费, 重新打样]
+    price:
+      file: references/11-case-cards-price.md
+      keywords_en: [price, quot, discount, cheaper, expensive, cost, budget, target price, mold fee, exchange rate, benchmark, tooling, mould, price increase, price drop]
+      keywords_zh: [价格, 报价, 折扣, 便宜, 贵, 成本, 预算, 目标价, 模具费, 汇率, 报错价, 开模费, 利润]
+    delivery_payment:
+      file: references/12-case-cards-delivery-payment.md
+      keywords_en: [pay, deposit, balance, installment, ship, deliver, lead time, freight, OA, "L/C", payment term, milestone, surcharge, customs, logistics, warehouse, container, clearance, duty, tariff]
+      keywords_zh: [付款, 定金, 尾款, 分期, 发货, 交期, 运费, 账期, 信用证, 物流, 清关, 海运, 空运, 催款, 欠款, 关税, 仓储, 集装箱, 提单]
+    followup_aftersales:
+      file: references/13-case-cards-followup-after-sales.md
+      keywords_en: [complaint, quality, defect, damaged, refund, silent, no reply, ignoring, follow up, win back, recover, reorder, review, feedback, warranty, after sales, return, negative review, dispute]
+      keywords_zh: [投诉, 质量, 缺陷, 损坏, 退款, 沉默, 不回复, 跟进, 挽回, 返单, 差评, 售后, 已读不回, 保修, 退货, 纠纷, 客诉]
+  fallback: references/03-email-case-library.md
+
+  # Cross-topic routing
+  cross_topic:
+    enabled: true
+    max_primary_files: 2
+    supplement_from_fallback: true
+    common_combinations:
+      - [price, delivery_payment]
+      - [samples, price]
+      - [delivery_payment, followup_aftersales]
+      - [price, followup_aftersales]
+      - [samples, followup_aftersales]
+
+# Channel configuration
+channel:
+  default: email
+  chat_triggers:
+    - TM
+    - 旺旺
+    - WhatsApp
+    - chat
+    - 聊天
+    - quick reply
+    - 快捷回复
+    - short message
+    - 短消息
+    - platform chat
+    - 平台聊天
+    - social DM
+    - WeChat
+    - 微信
+    - Skype
+    - LinkedIn message
+    - Telegram
+    - Facebook Messenger
+    - Instagram DM
+    - Line
+
+# Tone calibration
+tone:
+  default: professional
+  options:
+    professional:
+      description: Balanced, factual, firm but respectful
+    firm:
+      description: More direct, includes deadline or consequence
+      triggers: ["强硬", "firmer", "be firm", "直接一点"]
+    soft:
+      description: More empathetic, reduces pressure
+      triggers: ["温和", "softer", "be gentle", "委婉一点"]
+    urgent:
+      description: Time pressure, specific deadline
+      triggers: ["紧急", "urgent", "赶紧", "马上"]
+    casual:
+      description: Conversational, shorter sentences
+      triggers: ["轻松", "casual", "随意一点"]
+
+# Anonymization rules
+anonymization:
+  strip:
+    - company_names
+    - personal_names
+    - titles
+    - phone_numbers
+    - urls
+    - platform_accounts
+    - social_handles
+    - email_addresses
+    - bank_account_numbers
+  placeholder_format:
+    customer_name_zh: "[客户名]"
+    customer_name_en: "[Customer Name]"
+    seller_name_zh: "[您的名字]"
+    seller_name_en: "[Your Name]"
+    product_name_zh: "[产品名]"
+    product_name_en: "[Product Name]"
+    company_zh: "[公司名]"
+    company_en: "[Company Name]"
+
+# Diagnostic questions (max 3)
+diagnostic:
+  max_questions: 3
+  questions:
+    primary:
+      - id: customer_type
+        zh: "这是新客户还是老客户？"
+        en: "Is this a new customer or an existing customer?"
+      - id: main_blockage
+        zh: "目前卡在什么环节？"
+        en: "What is the main blockage right now?"
+      - id: customer_message
+        zh: "客户原话是什么？最好是英文原文。"
+        en: "What exactly did the customer say? (ideally the original English line)"
+    supplementary:
+      - id: product_type
+        zh: "涉及什么产品或设备？"
+        en: "What product or equipment is involved?"
+      - id: order_value
+        zh: "大概订单金额是多少？"
+        en: "What is the approximate order value?"
+      - id: channel
+        zh: "你们在哪个渠道沟通？"
+        en: "Which channel are you communicating on?"
+  skip_conditions:
+    - "customer provided original message"
+    - "issue category is clear from context"
+    - "user says 直接回复 or just draft it"
+
+# Case matching configuration
+case_matching:
+  min_cases: 3
+  max_cases: 5
+  relevance_scoring:
+    same_negotiation_type: 3
+    same_business_stage: 2
+    same_customer_type: 2
+    similar_product_value: 1
+  fallback_behavior: "supplement from 03-email-case-library.md"
+
+# Industry-specific presets
+industry:
+  machinery_equipment:
+    emphasis: [customization_risk, milestone_payment, after_sales_support, installation]
+    payment_default: "30-40-30 milestone"
+    risk_keywords: [定制, customized, 大型设备, high-value, 灌装机, filling machine]
+  consumer_goods:
+    emphasis: [MOQ, sample_quality, reorder_potential, packaging]
+    payment_default: "30-70 or 50-50"
+  raw_materials:
+    emphasis: [price_volatility, long_term_contract, volume_commitment]
+    payment_default: "T/T or L/C"
+  electronics:
+    emphasis: [certification, warranty, technical_support, compliance]
+    payment_default: "30-70 with inspection"
+
+# User case upload support
+user_cases:
+  enabled: true
+  behavior: >
+    Analyze user-provided cases using the same diagnostic framework.
+    Still match against bundled library for reference.
+    Incorporate user-specific context into output.
+    Do not store user cases across sessions.

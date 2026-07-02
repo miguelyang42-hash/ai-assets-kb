@@ -1,0 +1,35 @@
+## 1. Problem Judgment
+
+Issue: Payment terms for high-value equipment
+Type: Payment terms negotiation
+Stage: Negotiation
+Risk: Bad-debt risk from post-delivery installments
+Opportunity: Convert to milestone-based payment
+
+## 2. Case Match
+
+CASE-PAYMENT-003 / SRC-003 / Client pushes for longer terms
+CASE-PAYMENT-005 / SRC-003 / Installment payment for high-value equipment
+CASE-DELIVERY-001 / SRC-003 / Delay leads to refund pressure
+
+## 3. Response Strategy
+
+Step 1: Acknowledge customer cash flow concerns.
+Step 2: Propose milestone-based payment (30-40-30).
+Do not say: "We never accept installments" or "Pay after delivery."
+
+## 4. Email Drafts
+
+Chinese: [draft content]
+English: [draft content]
+
+## 5. WhatsApp Quick Replies
+
+CN: 1. ... 2. ... 3. ... 4. ...
+EN: 1. ... 2. ... 3. ... 4. ...
+
+## 6. Next-Step Advice
+
+1. Verify customer background.
+2. Suggest L/C as alternative.
+3. Emphasize customization.

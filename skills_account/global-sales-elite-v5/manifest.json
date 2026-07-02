@@ -1,0 +1,74 @@
+{
+  "name": "global-sales-elite-v5",
+  "display_name": "精细化开发-小蜂学掌 V5.4（小蜂学掌定制版）",
+  "version": "5.4.0",
+  "author": "小蜂学掌客户开发团队 × skill-writer-pro v3.0",
+  "description": "精细化开发-小蜂学掌 V5.4 工程化版（小蜂学掌定制版）。集成 Google/Instagram/Facebook/LinkedIn/TikTok 5 大渠道开发能力 + 深度背调分析师 + 谈判专家三核心。脚本驱动、跨平台一致（Win/Mac/Linux）、按国家_客群_日期自动归档：每个客户单独 1 份 Word 详细报告（含小蜂学掌封面/页眉/页脚）+ 1 份 24 列 Excel 群发总表（含品牌表头表尾），生成后输出绝对路径通知框。支持 12 项工程自检。",
+  "entry": "main.py",
+  "schema": "payload.schema.json",
+  "brand": {
+    "name": "小蜂学掌",
+    "website": "https://www.xfxz123.com/",
+    "file_prefix": "小蜂学掌_",
+    "nav_color": "1F4E79",
+    "accent_color": "F2C94C",
+    "footer_color": "F2F2F2"
+  },
+  "channels": [
+    {"id": "google",    "name": "Google 开发",    "trigger": "#Google开发"},
+    {"id": "instagram", "name": "Instagram 开发", "trigger": "#Ins开发"},
+    {"id": "facebook",  "name": "Facebook 开发",  "trigger": "#FB开发"},
+    {"id": "linkedin",  "name": "LinkedIn 开发",  "trigger": "#领英开发"},
+    {"id": "tiktok",    "name": "TikTok 开发",    "trigger": "#TK开发"}
+  ],
+  "triggers": [
+    "#批量开发",
+    "#深度渗透",
+    "#Google开发",
+    "#Ins开发",
+    "#FB开发",
+    "#领英开发",
+    "#TK开发",
+    "#全渠道开发"
+  ],
+  "outputs": {
+    "folder_pattern": "{country}_{segment}_{yyyymmdd}",
+    "excel_pattern": "小蜂学掌_{country}{segment}{yyyymmdd}.xlsx",
+    "word_pattern": "小蜂学掌_{name_simple} _ {profile} _ {country_en} _ {rating}.docx"
+  },
+  "scripts": {
+    "word_gen":   "scripts/word_gen.py",
+    "excel_sync": "scripts/excel_sync.py",
+    "self_check": "scripts/self_check.py"
+  },
+  "platform": ["windows", "macos", "linux"],
+  "python_min": "3.8",
+  "deps": ["python-docx>=1.0.0", "openpyxl>=3.1.0", "jsonschema>=4.0.0"],
+  "default_out_dir": {
+    "windows": "D:/Personal/Desktop/主动开发",
+    "macos":   "~/Desktop/主动开发",
+    "linux":   "~/Desktop/主动开发"
+  },
+  "changelog": [
+    {
+      "version": "5.4.0",
+      "date": "2026-05-09",
+      "changes": [
+        "小蜂学掌定制版：main.py 启动时输出品牌通知框（╔══╗格式）",
+        "生成完成后输出 Word + Excel 绝对路径通知框",
+        "Word：新增品牌封面（深海蓝标题块），页眉（品牌名|报告标题 + 深蓝分隔线），页脚（版权声明+页码）",
+        "Excel：行1品牌表头（深海蓝#1F4E79），行2金色分隔条（#F2C94C），行3数据表头（绿色#00B050），末行版权表尾（浅灰#F2F2F2），冻结改为A4",
+        "文件名前缀：小蜂学掌_（Word + Excel 均含）",
+        "self_check.py 升级至 12 项（原10项 + S11 Word品牌注入 + S12 通知框）",
+        "manifest.json 增加 brand 对象、outputs 命名模板更新"
+      ]
+    },
+    {
+      "version": "5.3.0",
+      "date": "2026-04-23",
+      "changes": [
+        "工程化版：5 大渠道 + 24 列 Excel + 十项自检 + 跨平台"
+      ]
+    }
+  ]
+}
